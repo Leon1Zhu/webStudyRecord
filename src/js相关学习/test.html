@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="./js/级联sleep10代码.js" type="text/javascript"></script>
+</head>
+<body>
+
+</body>
+<script>
+  //方法调用模式
+  var obj = {
+      value:1,
+      add : function(b){
+          console.log(this)
+          this.value += b;
+        console.log(this.value)
+      }
+  }
+  //函数调用模式
+  obj.module=function(){
+      var help = function(){
+          console.log(this);
+      }
+      help()
+  }
+  var help = function(){
+      console.log(this)
+  }
+
+  //构造器调用模式
+  var OPT = function(val){
+      this.status = val;
+  }
+  OPT.prototype.getStatus = function(){
+      return this.status;
+  }
+
+
+
+  //apply调用
+  var statusObject = {
+      status:"status"
+  }
+  var memoizer = function(memo,formula){
+      var recur = function(n){
+          var result = memo[n];
+          if(typeof result !== 'number'){
+              result = formula(recur,n)
+              memo[n]=result;
+          }
+          return result;
+    }
+    return recur;
+  }
+  var factorial =memoizer([1,1],function(recue,n){
+      return n * recue(n-1)
+  })
+  //console.log(factorial(10))
+
+ /* var myMammal = {
+      name:"dog",
+    get_name:function(){return this.name},
+    says:function(){
+        return this.saying || " ";
+    }
+  }
+  var Mamal = function(){
+      this.name = "zhuliang";
+  }
+  Mamal.prototype.get_name=function(){
+      return this.name;
+  }
+
+  var Cat = function(){
+      this.name="cat";
+      this.saying='meow';
+
+  }
+  Cat.prototype = new Mamal();
+  Cat.prototype.get_number = function(){
+      return 10;
+  }
+  var catEx = new Cat();*/
+
+/* var myCat = Object.create(myMammal);
+  myCat.name = "cat";
+  console.log(myCat.get_name())
+  console.log(myMammal.get_name())*/
+
+
+var Mamal = function(spec){
+    var that = {};
+    that.get_name =function(){
+      return spec.name;
+    };
+    that.says = function(){
+      //若saying为空，则直接返回''
+      return spec.saying || ''
+    };
+    return that;
+}
+
+var cat = function(spec){
+    spec.saying = spec.saying || '';
+    var that = Mamal(spec);
+    that.sayNumber = function(){
+        return 10;
+    }
+    console.log(that)
+    return that;
+}
+
+var mycat = cat({name:"vat"})
+
+  console.log(mycat.constructor)
+
+
+  /*console.log(mycat.get_name())//vat
+  console.log(mycat.says())// ''
+  console.log(mycat.sayNumber())//10*/
+
+  var arr=[10,8,57,29,3,5,7]
+ /* console.log(arr.sort())
+  console.log(arr.sort(function(a,b){
+      if(a === b){
+          return 0;
+      }
+      if(typeof a === typeof b) {
+        return a < b ? -1 : 1;
+      }
+      return typeof a < typeof b  ? -1 : 1
+  }))*/
+
+/* var temp = LazyMan("Jason").doSports("swimming");
+ temp.doWork("coading")*/
+ foo()
+  var foo= function (){
+     console.log(1111)
+  }
+
+
+</script>
+</html>

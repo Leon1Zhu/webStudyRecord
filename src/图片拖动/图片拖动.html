@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .image-slider{
+      position: relative;
+      display: inline-block;
+    }
+.image-slider > div{
+  overflow: hidden;
+  resize: horizontal;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:50%;
+  max-width:100%;
+}
+    .image-slider > div::before{
+      content: ' ';
+      position: absolute;
+      bottom:0;
+      right:0;
+      width:12px;
+      height:12px;
+      padding:5px;
+      background: linear-gradient(-45deg,white 50%,transparent 0);
+      background-clip: content-box;
+      cursor: ew-resize;
+      -webkit-filter: drop-shadow(0 0 2px black);
+      filter: drop-shadow(0 0 2px black);
+    }
+    .image-slider img{
+      display: block;
+      user-select: none;
+    }
+
+/* .image-slider {
+   position:relative;
+   display: inline-block;
+ }
+
+ .image-slider > div {
+   position: absolute;
+   top: 0; bottom: 0; left: 0;
+   width: 50%;
+   max-width: 100%;
+   overflow: hidden;
+   resize: horizontal;
+ }
+
+ .image-slider > div:before {
+   content: '';
+   position: absolute;
+   right: 0; bottom: 0;
+   width: 12px; height: 12px;
+   padding: 5px;
+   background: linear-gradient(-45deg, white 50%, transparent 0);
+   background-clip: content-box;
+   cursor: ew-resize;
+  !* -webkit-filter: drop-shadow(0 0 2px black);
+   filter: drop-shadow(0 0 2px black);*!
+ }
+
+ .image-slider img {
+   display: block;
+   user-select: none;
+ }*/
+  </style>
+</head>
+<body>
+<div class="image-slider">
+  <div>
+    <img src="1的副本.jpg">
+  </div>
+  <img src="4618425634BB26C1275A78342B181901.gif">
+</div>
+</body>
+</html>

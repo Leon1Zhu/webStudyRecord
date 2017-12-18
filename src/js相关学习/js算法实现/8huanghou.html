@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let x=[0,0,0,0,0,0,0];
+  var count =0
+  var NQueen={
+     n : 8,
+  }
+  //约束函数
+  var Place = function(k){
+    for(let j = 1;j<k;j++)
+    if(Math.abs(x[k] - x[j]) == Math.abs(k-j)||x[j] == x[k]){
+      return false;
+    }
+    return true;
+  }
+
+  var backtrack = function(t){
+      if(t>NQueen.n){
+          count++;
+              document.writeln(x);
+              document.writeln("------------------")
+      }else{
+          for(let i=0;i<NQueen.n;i++){
+              x[t]=i;
+              if(Place(t)){
+                  backtrack(t+1);
+              }
+          }
+      }
+  }
+  backtrack(1);
+  console.log(count)
+</script>
+</html>

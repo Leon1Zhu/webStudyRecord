@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  @keyframes spin {
+      to{
+        transform: rotate(1turn);
+      }
+  }
+
+  .box{
+    width:300px;
+    height: 300px;
+    background: yellow;
+    border-radius:100%;
+    padding: 35px;
+  }
+  .avatar{
+    height:40px;
+    width: 40px;
+    border-radius:100%;
+    animation:spin 3s infinite linear;
+    transform-origin:150px 150px ;
+  }
+  .avatar > img{
+    border-radius:100%;
+    width:inherit;
+    height:inherit;
+    animation: inherit;
+    animation-direction: reverse;
+  }
+</style>
+<body>
+<div class="box">
+  <div class="avatar">
+    <img  src="2D.png">
+  </div>
+</div>
+
+</body>
+</html>

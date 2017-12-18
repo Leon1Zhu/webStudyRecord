@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  @keyframes picture {
+    to{background-position: 100% 0}
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    width: 20em;
+    height: 20em;
+    max-width: 100%;
+    padding: 2em;
+    border: 0 solid rgba(0, 0, 0, 0.6);
+    border-width: 0 3px 4px 0;
+    border-radius: 50%;
+    margin: .6em 0 .5em 1em;
+    background: url(http://juliancheal.co.uk/images/juliancheal.jpg) no-repeat, linear-gradient(black, black),url(http://juliancheal.co.uk/images/leather.png) #805100;
+    background-position: 0% 100%, 0% 100%, 0% 100%;
+    background-size: auto 100%, auto;
+    background-clip: content-box, content-box, border-box;
+    background-origin: content-box, content-box, border-box;
+    box-shadow: 0.1em 0.3em 0.4em rgba(255, 255, 255, 0.2) inset, -0.1em -0.2em 0.4em rgba(0, 0, 0, 0.4) inset, 0.2em 0.6em 0.2em 0.4em rgba(0, 0, 0, 0.6);
+    animation: picture 10s linear alternate infinite;
+    animation-play-state: paused;
+    user-select: none;
+  }
+  figure > img{
+    display: none;
+  }
+  figcaption{
+    display: none;
+  }
+  figure:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    margin: 2em;
+    box-shadow: 0.1em 0.1em 0.4em rgba(255, 255, 255, 0.2), 0.1em 0.1em 1em black inset;
+  }
+  figure:after {
+    border: 2px dashed #291e0a;
+    content: ' ';
+    margin: .8em .7em .7em .8em;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.5));
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 50%;
+  }
+</style>
+<body>
+<figure>
+</figure>
+</body>
+</html>
