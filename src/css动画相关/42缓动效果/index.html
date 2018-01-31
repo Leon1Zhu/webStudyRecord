@@ -19,11 +19,25 @@
     height:100px;
     border-radius:50%;
     background: red;
-    animation:bounce 3s  cubic-bezier(.1,.25,1,.25);
+    animation:bounce 3s  cubic-bezier(.1,.25,1,.25) ;
     background: red radial-gradient(at 30% 30%,#fdd,red);
   }
 </style>
 <body>
 <div class="circle"></div>
 </body>
+<script>
+  window.onload=function(){
+    var tt = document.styleSheets[0]
+    console.log(tt)
+    var temp = tt.cssRules[0].cssText
+    setTimeout(function(){
+      tt.deleteRule(0)
+      setTimeout(function(){
+          tt.insertRule(' @keyframes bounce {60%,80%,to{transform: translateY(400px); animation-timing-function: ease; } 70%{transform: translateY(300px);} 90%{transform: translateY(360px);}}',0)
+      },1000)
+    },3000)
+  }
+
+</script>
 </html>
