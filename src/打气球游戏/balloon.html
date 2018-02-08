@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打气球</title>
+</head>
+<style>
+  body{
+    height:2200px;
+  }
+  .ballon{
+    width:160px;
+    height:160px;
+    border-radius: 100% 100% 43px 100%;
+    box-shadow: -8px -8px 80px -8px #873940 inset;
+    position: absolute;
+  }
+  .ballon:hover{
+    cursor: pointer;
+  }
+  .ballon:after{
+    content: '';
+    position: absolute;
+    border:8px solid transparent;
+    right:0;
+    bottom:0px;
+    border-right-color:#873940;
+    transform: rotate(45deg);
+    border-radius:50%;
+  }
+</style>
+<body>
+<!--<div class="ballon">
+
+</div>-->
+</body>
+<script>
+
+  //首先随机生成气球
+  //生成的气球不断上移
+  //点击气球不断变小，最后消失
+  let balloon={
+     wWAuto : document.documentElement.clientHeight,
+     wW : document.documentElement.clientHeight-160,
+     wWTop : this.wW+160
+  }
+  init();
+  //初始化生成气球
+  function init(){
+      //创建文档片段，这样不用直接向页面上添加，添加到页面片段，这个时候是不存在页面的，最后再放到body里面，这样之用渲染一次
+      let fragment = document.createDocumentFragment();
+
+
+      for(let i=0;i<10;i++){
+          let ballont = document.createElement('div');
+          ballont.className = 'ballon';
+          ballont.style.bottom = '-160px'
+          ballont.style.transition = 'transform 5s'
+          ballont.style.transform = 'rotate(45deg) translateZ(0)'
+          ballont.speed = Math.floor(Math.random()*20)
+          ballont.style.left = Math.floor(Math.random()*balloon.wW)+'px';
+          fragment.appendChild(ballont);
+          setTimeout(move.call(ballont),100)
+      }
+      document.body.appendChild(fragment);
+  }
+
+  //删除气球
+  document.body.addEventListener('click',function(e){
+    if(e.target.className === 'ballon'){
+          removeBallon.call(e.target)
+    }
+
+  })
+
+  //气球移动
+  function move(){
+
+        this.style.bottom = this.style.bottom.replace('px','')
+        if(parseInt(this.style.bottom,10) >= balloon.wWAuto){
+            if(this.parentNode == null){
+                return;
+            }else{
+              this.parentNode.removeChild(this);
+            }
+          return;
+        }
+        this.style.bottom = parseInt(this.style.bottom,10)+this.speed+'px'
+        setTimeout(arguments.callee.bind(this),50)
+  }
+  function removeBallon(){
+      if(this.offsetWidth<15){
+        if(this.parentNode == null){
+          return;
+        }else{
+          this.parentNode.removeChild(this);
+        }
+        return;
+      }
+      this.style.width = this.offsetWidth -10 +'px';
+      this.style.height = this.offsetHeight -10 +'px';
+      setTimeout(removeBallon.bind(this),10)
+  }
+
+
+
+</script>
+</html>
