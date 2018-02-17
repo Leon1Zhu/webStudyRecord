@@ -1,0 +1,72 @@
+html,body{
+  position: relative;
+  min-width:1200px!important;
+  zoom: 1;
+}
+
+body, button, input, select, textarea {
+  font: 12px/1.5 tahoma,'\5b8b\4f53',sans-serif;
+}
+.bg-content{
+  position: relative;
+  width:100%;
+  overflow: hidden;
+  height:7300px;
+
+}
+.my-bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+.bg1{
+  background: url("../assets/bg1.jpg") no-repeat center;
+  width:100%;
+  height:1103px;
+  position: relative;
+}
+
+.bg1 .video{
+  position: absolute;
+  width: 1920px;
+  height:900px;
+  margin-left:-920px;
+  left:50%;
+}
+.bg1 .bg1-video-cover{
+  background: url("../assets/kv-video-cover.png") no-repeat center;
+  position: absolute;
+  bottom:0;
+  left:0;
+  height:570px;
+  width:100%;
+}
+
+.bg2{
+  background: url("../assets/bg2.jpg") no-repeat center;
+  width:100%;
+  height:2099px;
+}
+
+.bg3{
+  background: url("../assets/bg3.jpg") no-repeat center;
+  width:100%;
+  height:2099px;
+  position: relative;
+}
+
+
+.bg4{
+  background: url("../assets/bg4.jpg") no-repeat center;
+  width:100%;
+  height:2099px;
+  position: relative;
+}
+
+
+
+
+
+
+

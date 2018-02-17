@@ -3,13 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>峡谷战新春！2018《英雄联盟》春节巨献-英雄联盟官方网站-腾讯游戏</title>
+  <!--reset-->
+  <link rel="stylesheet" href="./css/reset.css" charset="utf-8">
+  <!--一般样式-->
+  <link rel="stylesheet" href="./css/common.css" charset="utf-8">
+  <!--导航样式-->
+  <link rel="stylesheet" href="./css/nav.css" charset="utf-8">
+  <!--五福临门样式-->
+  <link rel="stylesheet" href="./css/first-page.css" charset="utf-8">
+  <!--工具类-->
+  <script src="./js/util.js" ></script>
+  <!--导航js-->
+  <script src="./js/nav.js" ></script>
+  <!--导航js-->
+  <script src="./js/data.js" ></script>
 </head>
-<body>
-<section class="">
+<body onload="padintNavDom()">
+<div class="main-content">
+  <!--导航样式-->
+  <nav class="activity-nav">
+    <div class="nav-inner">
+      <article class="lol-logo"></article>
+      <ul class="activity-list">
+      </ul>
+      <li class="activity-act-item return-home">
+        <i></i>
+        <b>返回官网</b>
+      </li>
+    </div>
 
-</section>
+  </nav>
+  <!--背景content-->
+  <section class="bg-content">
+    <div class="my-bg">
+      <div class="bg1">
+        <video autoplay loop muted class="video" src="./assets/1bg.mp4"></video>
+        <div class="bg1-video-cover"></div>
+      </div>
+      <div class="bg2"></div>
+      <div class="bg3"></div>
+      <div class="bg4"></div>
+    </div>
+  </section>
+
+  <!--五福临盟-->
+  <section class="first-page">
+    <!--视频按钮-->
+    <div class="play-video">
+      <span></span>
+    </div>
+  </section>
+
+  <!--峡谷战新春-->
+  <section>
+
+  </section>
+
+  <!--新禧福利畅想-->
+  <section>
+
+  </section>
+
+  <!--新品限时乐购-->
+  <section>
+
+  </section>
+
+  <!--明星与你同乐-->
+  <section>
+
+  </section>
+
+  <!--年装峡谷任你玩-->
+  <section>
+
+  </section>
+
+  <!--萌春活动齐欢-->
+  <section>
+
+  </section>
+
+
+</div>
 
 
 
 </body>
+
+<script>
+  var myLol={
+      navListDom:navListDomData,
+
+  }
+  function padintNavDom(){
+    let nav_dom = navDom(myLol.navListDom)
+
+  }
+</script>
 </html>

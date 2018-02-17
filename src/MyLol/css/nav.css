@@ -1,0 +1,136 @@
+.main-content .activity-nav{
+  width:100%;
+  height:100px;
+  background: url("../assets/spring-nav.jpg") no-repeat center;
+
+}
+.main-content .activity-nav .nav-inner{
+  width:1200px;
+  height:100%;
+  margin:0 auto;
+  display: block;
+
+}
+.main-content .activity-nav .nav-inner .lol-logo{
+  background: url("../assets/spring-nav-spr.png") no-repeat 3px -107px;
+  width: 138px;
+  height: 66px;
+  margin-top:16px;
+  float: left;
+}
+
+.main-content .activity-nav .nav-inner .activity-list{
+  float: left;
+
+}
+
+.main-content .activity-nav .nav-inner .activity-item,.main-content .activity-nav .nav-inner .activity-act-item{
+  overflow: hidden;
+  float: left;
+  height:99px;
+  width:117px;
+  overflow: hidden;
+}
+.main-content .activity-nav .nav-inner .activity-list  li,.return-home{
+  transition: filter .3s;
+}
+.main-content .activity-nav .nav-inner .activity-list  li:hover,.return-home:hover{
+  cursor: pointer;
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+}
+.main-content .activity-nav .nav-inner .return-home{
+  text-align: center;
+}
+.main-content .activity-nav .nav-inner .return-home i{
+  background: url("../assets/spring-nav-spr.png") no-repeat -137px -134px;
+  width:18px;
+  height:15px;
+  display: block;
+  margin:20px auto 10px;
+}
+.main-content .activity-nav .nav-inner .return-home b{
+  text-align: center;
+  color: #f9f1c7;
+  font-size:18px;
+  font-weight:700;
+
+}
+.main-content .activity-nav .nav-inner .activity-item{
+  background: url("../assets/spring-nav-spr.png")no-repeat;
+}
+
+
+.main-content .activity-nav .nav-inner .activity-act-item{
+  background: url("../assets/spring-nav-spr.png")no-repeat -124px 0;
+}
+
+
+.main-content .activity-nav .nav-inner .activity-list li span{
+  display: block;
+  margin:12px 0 0 ;
+  text-align: center;
+  position: relative;
+}
+.main-content .activity-nav .nav-inner .activity-list li .halving-line{
+  display: block;
+  background:url("../assets/spring-nav-spr.png")no-repeat -137px -119px;
+  width:104px;
+  height:10px;
+  margin:2px auto;
+}
+
+.main-content .activity-nav .nav-inner .activity-list li p{
+  display: block;
+  color: #f9f1c7;
+  font-size:14px;
+  font-weight:700;
+  text-align: center;
+}
+
+
+.main-content .activity-nav .nav-inner .activity-list li em{
+  display: block;
+  color: #ffb27f;
+  font-size:12px;
+  font-style: normal;
+  text-align: center;
+}
+
+.main-content .activity-nav .nav-inner .activity-list .activity-item em{
+  color: #b65413;
+}
+
+.main-content .activity-nav .nav-inner .activity-list .on.comming:after{
+  content: '';
+  display: block;
+  width:10px;
+  height:16px;
+  background: url("../assets/spring-nav-spr.png")no-repeat -167px -133px;
+  position: absolute;
+  right: 16px;
+  top: 3px;
+
+}
+
+.main-content .activity-nav .nav-inner .activity-list .activity-act-item span{
+  color: #ef8247;
+  font-size:14px;
+  font-weight:700;
+  background-image: linear-gradient(to right,#fee3b5,#f8bb87);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color:transparent;
+}
+
+.main-content .activity-nav .nav-inner .activity-list .activity-item  span{
+  color: #7d3209;
+  font-size:14px;
+  font-weight:700;
+  background-image: linear-gradient(to bottom,#541c06,#8f2706);
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
