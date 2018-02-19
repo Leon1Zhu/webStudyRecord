@@ -1,0 +1,57 @@
+@keyframes play-video-span {
+  0%,100%{box-shadow:#5b1409 0 2px 13px}
+  50%{
+    transform: translateY(4px);
+  }
+}
+
+@keyframes leftToRight {
+  0%{left:-150px;}
+  100%{left:250px}
+}
+
+@keyframes arrow-bottom {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+    transform: translateY(10px);
+  }
+
+}
+
+
+@keyframes leftToRight {
+  25%,75%{
+    transform: translateX(40px);
+  }
+  50%{
+    transform: translateX(-40px);
+  }
+  0%,100%{
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes cardRotate {
+  0%,100%{
+    transform: perspective(400px)
+  }
+  10%,30%,50%,70%,90%{
+    transform: perspective(400px) rotate3d(1,-1,0,30deg);
+  }
+  20%,40%,60%,80%{
+    transform: perspective(400px) rotate3d(1,-1,0,-30deg);
+  }
+}
+
+@keyframes rotateIcon {
+  0%,100%{
+    transform: rotate3d(0,0,1,0deg)
+  }
+  50%{
+    transform: rotate3d(0,0,1,5deg)
+  }
+}

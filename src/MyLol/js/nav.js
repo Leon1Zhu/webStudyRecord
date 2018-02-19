@@ -7,7 +7,7 @@ var navDom = function(data){
       for(var i=0,len=data.length;i<len;i++){
         var dataItem = data[i];
         var listDom = document.createElement('li');
-        listDom.className = dataItem.isComming ? 'activity-item' : 'activity-act-item';
+        listDom.className = dataItem.isComming ? 'activity-item filter' : 'activity-act-item filter';
          this.packageContent(listDom,dataItem)
         fragment.appendChild(listDom);
       }

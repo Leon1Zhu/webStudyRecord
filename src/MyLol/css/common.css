@@ -1,13 +1,15 @@
+html{
+  min-width:1240px;
+}
 html,body{
   position: relative;
-  min-width:1200px!important;
   zoom: 1;
 }
 
 body, button, input, select, textarea {
   font: 12px/1.5 tahoma,'\5b8b\4f53',sans-serif;
 }
-.bg-content{
+.content{
   position: relative;
   width:100%;
   overflow: hidden;
@@ -31,8 +33,9 @@ body, button, input, select, textarea {
   position: absolute;
   width: 1920px;
   height:900px;
-  margin-left:-920px;
+  margin-left:-960px;
   left:50%;
+  top:-40px;
 }
 .bg1 .bg1-video-cover{
   background: url("../assets/kv-video-cover.png") no-repeat center;
@@ -62,6 +65,16 @@ body, button, input, select, textarea {
   width:100%;
   height:2099px;
   position: relative;
+}
+.filter{
+  transition: filter .3s;
+}
+.filter:hover{
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+}
+.cursor:hover{
+  cursor: pointer;
 }
 
 

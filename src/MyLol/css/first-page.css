@@ -1,3 +1,74 @@
+.first-page{
+  width:100%;
+  position: relative;
+}
+.first-page .content{
+  margin:0 auto;
+  position: relative;
+  width:1200px;
+  height:895px;
+}
 .play-video{
-  padding:510px 9px 10px;
+  padding:510px 0px 10px;
+}
+.play-video a{
+  margin:0 auto;
+  display: block;
+  width:59px;
+  height:59px;
+  background: url("../assets/spr_redpackage.png") no-repeat -1984px -1196px;
+
+  border-radius:50%;
+  box-shadow: #5b1409 0 2px 13px;
+}
+.content .login-info{
+  text-align: center;
+  color: #fff;
+  font-size:14px;
+}
+.content .login-info span{
+  color: #fcde5b;
+}
+.first-page .bottom-btn{
+  background: url("../assets/spr_redpackage.png") no-repeat -508px -411px;
+  width:230px;
+  height:45px;
+  position: absolute;
+  left:50%;
+  top:640px;
+  margin-left:-115px;
+  color: #feefb8;
+  font-size:20px;
+  font-weight:700px;
+  text-align: center;
+}
+
+.first-page .bottom-btn span{
+  display: block;
+  height:40px;
+  line-height:40px;
+  overflow: hidden;
+  margin:0 9px 0 7px;
+  position: relative;
+}
+
+.first-page .bottom-btn  span:before{
+  content: ' ';
+  position: absolute;
+  width:80px;
+  height:350px;
+  top:0;
+  left:-150px;
+  transform: skew(-25deg);
+  background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.5) 50%,rgba(255,255,255,0) 100%);
+}
+.first-page .bottom-btn i{
+  display: block;
+  position: absolute;
+  left:50%;
+  margin-left:-8.5px;
+  bottom:-11px;
+  background: url("../assets/spr_redpackage.png")no-repeat -2033px -789px;
+  width:17px;
+  height:10px;
 }

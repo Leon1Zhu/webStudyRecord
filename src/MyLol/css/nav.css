@@ -36,8 +36,6 @@
 }
 .main-content .activity-nav .nav-inner .activity-list  li:hover,.return-home:hover{
   cursor: pointer;
-  -webkit-filter: brightness(1.2);
-  filter: brightness(1.2);
 }
 .main-content .activity-nav .nav-inner .return-home{
   text-align: center;

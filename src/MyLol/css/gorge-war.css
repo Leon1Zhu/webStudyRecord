@@ -1,0 +1,170 @@
+.gorge-war{
+  transform: translateY(100px);
+  transition: all 1.4s;
+  opacity:0;
+  margin:100px auto 80px;
+  position: relative;
+  width:1200px;
+}
+.gorge-war.active{
+  transform: none;
+  opacity:1;
+}
+.gorge-war .bg1{
+  background: url("../assets/gw-decorate-1.png") no-repeat;
+  width:1507px;
+  height:752px;
+  position: absolute;
+  left:50%;
+  margin-left:-830px;
+  top:60px;
+  transition: all 2s ease .5s;
+  transform: scale(0);
+}
+
+.gorge-war.active .bg1{
+  transform: scale(1);
+}
+
+
+.gorge-war .bg2{
+  background: url("../assets/gw-decorate-2.png") no-repeat;
+  width:1556px;
+  height:700px;
+  position: absolute;
+  left:50%;
+  margin-left:-778px;
+  top:100px;
+  transition: all 2s ease .8s;
+  transform: scale(0);
+}
+
+.gorge-war.active .bg2{
+  transform: scale(1);
+}
+
+
+.gorge-war .bgs{
+  width:1556px;
+  height:700px;
+  position: absolute;
+  left:50%;
+  margin-left:-778px;
+  top:100px;
+  transition: all 2s ease 1.2s;
+  transform: scale(0);
+}
+
+.gorge-war.active .bgs{
+  transform: scale(1);
+}
+
+.gorge-war .bgs .left-card{
+  position: absolute;
+  top:220px;
+  left:70px;
+  background: url(../assets/spr_redpackage.png) no-repeat -240px -1381px;
+  width:199px;
+  height:142px;
+}
+.gorge-war .bgs .right-card{
+  position: absolute;
+  top:150px;
+  right:70px;
+  background: url("../assets/spr_redpackage.png") no-repeat 0 -1342px;
+  width:235px;
+  height:183px;
+}
+
+.gorge-war .content{
+  background: url("../assets/gorge-war.png") no-repeat;
+  width:849px;
+  height:800px;
+  margin:0 auto;
+  position: relative;
+}
+
+.gorge-war ul{
+  padding:280px 0 0;
+  text-align: center;
+  font-size:0;
+}
+
+.gorge-war ul li:first-child{
+  margin-left:-14px;
+}
+.gorge-war ul li{
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.gorge-war ul li p{
+  display: block;
+  text-align: center;
+  width:68px;
+  height:26px;
+  line-height:26px;
+  background: #8d3f21;
+  color: #ffda69;
+  font-size:12px;
+  border-radius:13px;
+  position: absolute;
+  left:50%;
+  margin-left:-24px;
+  bottom:48px;
+}
+.gorge-war ul .gw-1{
+  background: url("../assets/spr_redpackage.png")no-repeat -90px -1530px;
+  width:166px;
+  height:237px;
+}
+
+.gorge-war ul .gw-2{
+  background: url("../assets/spr_redpackage.png")no-repeat -429px -1530px;
+  width:163px;
+  height:237px;
+}
+
+
+.gorge-war ul .gw-3{
+  background: url("../assets/spr_redpackage.png")no-repeat -261px -1530px;
+  width:166px;
+  height:237px;
+}
+
+
+.gorge-war ul .gw-4{
+  background: url("../assets/spr_redpackage.png")no-repeat -579px -1530px;
+  width:166px;
+  height:237px;
+}
+
+.gorge-war ul .gw-5{
+  background: url("../assets/spr_redpackage.png")no-repeat -1592px -715px;
+  width:331px;
+  height:203px;
+}
+
+.gorge-war ul .gw-6{
+  background: url("../assets/spr_redpackage.png")no-repeat -1592px -507px;
+  width:331px;
+  height:203px;
+}
+
+.gorge-war .content .bottom-btn{
+  background: url("../assets/spr_redpackage.png") no-repeat -1090px -837px;
+  position: absolute;
+  left:50%;
+  margin-left:-154px;
+  bottom:-4px;
+  font-size:0;
+  width:309px;
+  height:75px;
+
+
+}
+
+
+
+

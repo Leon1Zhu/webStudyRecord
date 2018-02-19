@@ -1,0 +1,122 @@
+.red-package-page{
+  width:1200px;
+  margin:0 auto;
+  padding:20px 0 0;
+  opacity:0;
+  transform:translateY(100px) ;
+
+  transition: all 1.4s;
+  position: relative;
+}
+.red-package-page .content{
+  background: url("../assets/rp-main.png");
+  width:772px;
+  height:672px;
+  margin:0 auto;
+  position: relative;
+}
+
+.red-package-page .red-package-bg1{
+  background: url("../assets/rp-decorate-1.png") no-repeat;
+  width:1507px;
+  height:768px;
+  position: absolute;
+  left:50%;
+  margin-left:-780px;
+  top:70px;
+  transition: transform 2s ease .5s;
+  transform: scale(0);
+}
+
+.red-package-page .red-package-bg2{
+  background: url("../assets/rp-decorate-2.png") no-repeat;
+  width:1562px;
+  height:679px;
+  position: absolute;
+  top: 100px;
+  transition: transform 2s ease .8s;
+  transform:scale(0);
+  left:50%;
+  margin-left:-781px;
+}
+
+.red-package-page .red-package-bgs{
+  transform: scale(0);
+  width:1556px;
+  height:700px;
+  position: absolute;
+  left:50%;
+  margin-left:-778px;
+  top:100px;
+  transition: transform 2s ease 1.2s;
+}
+.red-package-page .red-package-bgs .left-card{
+  background: url("../assets/spr_redpackage.png") no-repeat -1819px -207px;
+  width:222px;
+  height:183px;
+  position: absolute;
+  top:220px;
+  left:30px;
+}
+
+.red-package-page .red-package-bgs .right-card{
+  background: url("../assets/spr_redpackage.png") no-repeat -1665px -1158px;
+  width:248px;
+  height:163px;
+  position: absolute;
+  top:200px;
+  right:70px;
+}
+.red-package-page.active{
+  opacity:1;
+  transform: none;
+}
+
+.red-package-page.active .red-package-bg1,.red-package-page.active .red-package-bg2,.red-package-page .red-package-bg3{
+  transform: scale(1);
+}
+
+.red-package-page .bottom-content{
+  position: relative;
+  margin:60px 0 100px;
+}
+
+.red-package-page .bottom-content dl{
+  margin: 0 0 0 254px;
+  position: relative;
+  line-height:2;
+}
+
+.red-package-page .bottom-content dt{
+  color: #855706;
+  font-size:18px;
+  font-weight:700;
+}
+
+.red-package-page .bottom-content dd{
+  color: #855706;
+  font-size:14px;
+}
+.red-package-page .qr_code{
+  position:absolute;
+  right:120px;
+  top:0;
+}
+.red-package-page .QR{
+  background: url("../assets/spr_redpackage.png") no-repeat -1422px -1158px;
+  width:238px;
+  height:177px;
+  position: relative;
+  z-index:2;
+}
+
+.red-package-page .qr-icon{
+  content: ' ';
+  background: url("../assets/spr_redpackage.png") no-repeat -1928px -507px;
+  width:103px;
+  height:74px;
+  position: absolute;
+  top:-56px;
+  right:90px;
+}
+

@@ -7,16 +7,44 @@
   <link rel="stylesheet" href="./css/reset.css" charset="utf-8">
   <!--一般样式-->
   <link rel="stylesheet" href="./css/common.css" charset="utf-8">
+  <!--动画样式-->
+  <link rel="stylesheet" href="./css/keysframesCss.css" charset="utf-8">
   <!--导航样式-->
   <link rel="stylesheet" href="./css/nav.css" charset="utf-8">
   <!--五福临门样式-->
   <link rel="stylesheet" href="./css/first-page.css" charset="utf-8">
+  <!--五福临门,红包贺岁样式-->
+  <link rel="stylesheet" href="./css/red-package.css" charset="utf-8">
+  <!--峡谷战新春样式-->
+  <link rel="stylesheet" href="./css/gorge-war.css" charset="utf-8">
   <!--工具类-->
   <script src="./js/util.js" ></script>
   <!--导航js-->
   <script src="./js/nav.js" ></script>
   <!--导航js-->
   <script src="./js/data.js" ></script>
+  <style>
+    .play-video span{
+      animation: play-video-span 3s ease-in-out infinite;
+    }
+    .bottom-btn span:before{
+      animation: leftToRight 1.5s ease infinite;
+    }
+    .first-page .bottom-btn i{
+      animation:arrow-bottom 2s infinite;
+    }
+    .left-to-right{
+      animation:leftToRight 8s ease-in-out infinite;
+    }
+    .left-to-right .left-card,.left-to-right .right-card{
+      animation:cardRotate 20s ease-in-out infinite;
+    }
+    .red-package-page .qr-icon{
+      animation: rotateIcon 2s linear infinite;
+      transform-origin: bottom center;
+    }
+
+  </style>
 </head>
 <body onload="padintNavDom()">
 <div class="main-content">
@@ -24,9 +52,9 @@
   <nav class="activity-nav">
     <div class="nav-inner">
       <article class="lol-logo"></article>
-      <ul class="activity-list">
+      <ul class="activity-list ">
       </ul>
-      <li class="activity-act-item return-home">
+      <li class="activity-act-item return-home filter">
         <i></i>
         <b>返回官网</b>
       </li>
@@ -34,56 +62,122 @@
 
   </nav>
   <!--背景content-->
-  <section class="bg-content">
-    <div class="my-bg">
-      <div class="bg1">
-        <video autoplay loop muted class="video" src="./assets/1bg.mp4"></video>
-        <div class="bg1-video-cover"></div>
+  <section class="content">
+      <div class="my-bg">
+        <div class="bg1">
+          <video autoplay loop muted class="video" src="./assets/1bg.mp4"></video>
+          <div class="bg1-video-cover "></div>
+        </div>
+        <div class="bg2"></div>
+        <div class="bg3"></div>
+        <div class="bg4"></div>
       </div>
-      <div class="bg2"></div>
-      <div class="bg3"></div>
-      <div class="bg4"></div>
-    </div>
+
+
+    <!--五福临盟-->
+    <section class="first-page">
+      <section class="content">
+        <!--视频按钮-->
+        <div class="play-video">
+          <a class="filter cursor"></a>
+
+        </div>
+        <div class="login-info">
+          <p>召唤师你好，请<span class="filter cursor">[登陆]</span></p>
+        </div>
+        <div class="bottom-btn">
+          <span>重磅福利喜迎新春</span>
+          <i></i>
+        </div>
+      </section>
+    </section>
+
+    <!--五福临盟，红包贺岁-->
+    <section class="red-package-page active">
+       <div class="red-package-bg1 left-to-right"></div>
+       <div class="red-package-bg2 left-to-right"></div>
+       <div class="red-package-bgs left-to-right">
+           <div class="left-card "></div>
+           <div class="right-card"></div>
+       </div>
+      <div class="content"></div>
+      <div class="bottom-content">
+        <dl>
+          <dt>参与规则:</dt>
+          <dd>1. 从情人节开始到大年初七，每天刷新一位明星召唤师派送红包福利；</dd>
+          <dd>2. 每位召唤师每天可以领取一次明星红包；</dd>
+          <dd>3. 红包会开出随机数额的新年宝珠，攒齐定额新年宝珠可兑换永久皮肤哟；</dd>
+          <dd>4. 每天的明星红包除了可以在活动页领取以外，还可以分享到社交平台召唤朋友一起来领福利；</dd>
+        </dl>
+        <div class="qr_code">
+          <div class="QR"></div>
+          <div class="qr-icon"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--峡谷战新春-->
+    <section class="gorge-war active">
+      <div class="bg1 left-to-right"></div>
+      <div class="bg2 left-to-right"></div>
+      <div class="bgs left-to-right">
+        <div class="left-card"></div>
+        <div class="right-card"></div>
+      </div>
+      <div class="content">
+        <ul>
+          <li class="gw-1">
+            <p class="filter cursor">参与方式</p>
+          </li>
+          <li class="gw-2">
+            <p class="filter cursor">立即领取</p>
+          </li>
+          <li class="gw-3">
+            <p class="filter cursor">已开启</p>
+          </li>
+          <li class="gw-4">
+            <p class="filter cursor">马上参与</p>
+          </li>
+          <li class="gw-5">
+            <p class="filter cursor">查看详情</p>
+          </li>
+          <li class="gw-6">
+            <p class="filter cursor">查看详情</p>
+          </li>
+        </ul>
+        <p class="filter cursor bottom-btn"></p>
+      </div>
+      <div class="clound1"></div>
+      <div class="clound2"></div>
+      <div class="clound3"></div>
+
+    </section>
+
+    <!--新禧福利畅想-->
+    <section>
+
+    </section>
+
+    <!--新品限时乐购-->
+    <section>
+
+    </section>
+
+    <!--明星与你同乐-->
+    <section>
+
+    </section>
+
+    <!--年装峡谷任你玩-->
+    <section>
+
+    </section>
+
+    <!--萌春活动齐欢-->
+    <section>
+
+    </section>
   </section>
-
-  <!--五福临盟-->
-  <section class="first-page">
-    <!--视频按钮-->
-    <div class="play-video">
-      <span></span>
-    </div>
-  </section>
-
-  <!--峡谷战新春-->
-  <section>
-
-  </section>
-
-  <!--新禧福利畅想-->
-  <section>
-
-  </section>
-
-  <!--新品限时乐购-->
-  <section>
-
-  </section>
-
-  <!--明星与你同乐-->
-  <section>
-
-  </section>
-
-  <!--年装峡谷任你玩-->
-  <section>
-
-  </section>
-
-  <!--萌春活动齐欢-->
-  <section>
-
-  </section>
-
 
 </div>
 
