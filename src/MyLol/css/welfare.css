@@ -1,0 +1,169 @@
+.welfare{
+  transition: all 1.4s;
+  transform: translateY(100px);
+  opacity:0;
+  height:1000px;
+  width:1200px;
+  margin:0 auto;
+  position: relative;
+}
+.welfare.active{
+  transform: none;
+  opacity:1;
+}
+
+.welfare h2{
+  font-size:0;
+  position: relative;
+  background: url("../assets/spr_redpackage.png")no-repeat 0 -1135px;
+  width:628px;
+  height:202px;
+  margin: 0 auto;
+}
+.welfare ul{
+  position: relative;
+  height:640px;
+  margin:-50px 0 0;
+}
+.welfare ul li{
+  position: absolute;
+  box-sizing: border-box;
+}
+.welfare ul li i{
+  transition:  all .2s linear;
+}
+.welfare .welfare-1{
+  background: url("../assets/welfare-1.png") no-repeat;
+  width:667px;
+  height:351px;
+  top:0;
+  left:-40px;
+  padding:140px 330px 0 74px;
+  text-align: right;
+}
+.welfare .welfare-1 .icon-1{
+  background: url("../assets/welfare-subject-1.png") no-repeat;
+  width:445px;
+  height:351px;
+  position: absolute;
+  top:0;
+  right:0;
+}
+.welfare .welfare-1 .clound-1{
+  background: url("../assets/spr_redpackage.png") no-repeat -587px -1463px;
+  width:153px;
+  height:41px;
+  position: absolute;
+  top:270px;
+  right:150px;
+}
+
+
+.welfare .welfare-2{
+  background: url("../assets/welfare-2.png") no-repeat;
+  width:689px;
+  height:332px;
+  top:18px;
+  right:-34px;
+  padding:124px 88px 0 376px;
+  text-align: left;
+}
+
+
+.welfare .welfare-2 .icon-1{
+  background: url("../assets/welfare-subject-2.png")no-repeat ;
+  width:506px;
+  height:336px;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.welfare .welfare-2 .clound-1{
+  background: url("../assets/spr_redpackage.png")no-repeat -982px -522px;
+  width:92px;
+  height:31px;
+  position: absolute;
+  top:260px;
+  left:175px;
+}
+
+.welfare .welfare-3{
+  background: url("../assets/welfare-3.png") no-repeat;
+  width:578px;
+  height:262px;
+  top:320px;
+  left:-28px;
+  padding:80px 260px 0 64px;
+  text-align: right;
+}
+
+
+.welfare .welfare-3 .icon-1{
+  background: url("../assets/welfare-subject-3.png")no-repeat ;
+  width:262px;
+  height:262px;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.welfare .welfare-3 .icon-1 .card{
+  background: url("../assets/ws-3-card.png")no-repeat ;
+  width:92px;
+  height:120px;
+  position: absolute;
+  top:30px;
+  left:80px;
+  display: block;
+  transition: transform .3s linear;
+}
+
+.welfare .welfare-3 .icon-1 .welfare-card{
+  background: url("../assets/ws-3-cover.png")no-repeat ;
+  width:228px;
+  height:243px;
+  position: absolute;
+  top:-10px;
+  left:43px;
+  display: block;
+  transition: transform .3s linear;
+}
+
+
+.welfare .welfare-3 .clound-1{
+  background: url("../assets/spr_redpackage.png")no-repeat -1928px -715px;
+  width:110px;
+  height:46px;
+  position: absolute;
+  top:210px;
+  left:80px;
+}
+
+
+.welfare .welfare-4{
+  background: url("../assets/welfare-4.png") no-repeat;
+  width:576px;
+  height:263px;
+  top:316px;
+  right:16px;
+  padding:84px 30px 0 316px;
+  text-align: left;
+
+}
+
+.welfare .welfare-4 .icon-1{
+  background: url("../assets/frame-bag-normal-s.png") no-repeat 0 0;
+  width:214px;
+  height:306px;
+  position: absolute;
+  bottom:30px;
+  left:86px;
+}
+.welfare .welfare-4 .clound-1{
+  background: url("../assets/spr_redpackage.png") no-repeat -873px -372px;
+  width:146px;
+  height:34px;
+  position: absolute;
+  top:202px;
+  left:158px;
+}

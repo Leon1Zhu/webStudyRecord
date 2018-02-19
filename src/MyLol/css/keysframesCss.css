@@ -55,3 +55,8 @@
     transform: rotate3d(0,0,1,5deg)
   }
 }
+
+@keyframes welfare-bg {
+  0%{  background-position: 0 0;}
+  100%{  background-position: -2345px 0;}
+}
