@@ -161,8 +161,36 @@
   font-size:0;
   width:309px;
   height:75px;
+}
+
+.gorge-war .clound1{
+  background: url("../assets/spr_redpackage.png")no-repeat -1987px -477px;
+  position: absolute;
+  width:57px;
+  height:11px;
+  top:480px;
+  left:530px;
+  animation-delay: .3s;
+}
+
+.gorge-war .clound2{
+  background: url("../assets/spr_redpackage.png") no-repeat -1918px -1306px;
+  position: absolute;
+  top:570px;
+  left:260px;
+  width: 75px;
+  height: 15px;
+}
 
 
+.gorge-war .clound3{
+  background: url("../assets/spr_redpackage.png") no-repeat -1967px -923px;
+  position: absolute;
+  top: 722px;
+  right: 300px;
+  animation-delay: .8s;
+  width: 75px;
+  height: 19px;
 }
 
 

@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="./css/gorge-war.css" charset="utf-8">
   <!--新禧福利畅想-->
   <link rel="stylesheet" href="./css/welfare.css" charset="utf-8">
+  <!--新品限时乐购-->
+  <link rel="stylesheet" href="./css/news-time-limit.css" charset="utf-8">
+  <!--年装峡谷任你玩-->
+  <link rel="stylesheet" href="./css/as-you-play.css" charset="utf-8">
   <!--工具类-->
   <script src="./js/util.js" ></script>
   <!--导航js-->
@@ -50,35 +54,53 @@
       animation: welfare-bg 1s steps(11,end) infinite;
     }
 
-    .welfare ul:before{
+    .welfare ul:before,.bg3 .bottom-clound,.news-time-limit .clound-1,.news-time-limit .clound-2{
       animation:swingTopToBottom 4s ease-in-out infinite;
     }
-    .bg3 .bottom-clound{
-      animation:swingTopToBottom 4s ease-in-out infinite;
-    }
-    .test{
-      transition: all .5s;
-    }
-    @keyframes coruscate {
-      0%{
-        opacity:.5;
-        transform: scale(1);
-      }
-      100%{
-        opacity:0;
-        transform: scale(1.2);
-      }
-    }
-    .test:hover:before{
-      content: ' ';
-      background: url('./assets/spr_redpackage.png') no-repeat -508px 0;
-      width: 577px;
-      height: 323px;
+
+    .as-you-play .card-list  .card-1:hover:before{
+      content: '';
       position: absolute;
-      top:0;
-      left:0;
-      animation:coruscate .2s ease-in-out
+      background: url("./assets/spr_redpackage.png")no-repeat -508px 0;
+      width:577px;
+      height:323px;
+      top:0px;
+      left:0px;
+      animation:coruscate .4s ease-in-out;
     }
+
+    .as-you-play .card-list  .card-2:hover:before{
+      content: '';
+      position: absolute;
+      background: url("./assets/spr_redpackage.png")no-repeat -1422px -207px;
+      width:392px;
+      height:295px;
+      top:0px;
+      left:0px;
+      animation:coruscate .4s ease-in-out;
+    }
+
+
+
+    .as-you-play .card-list  .card-3:hover:before{
+      content: '';
+      position: absolute;
+      background: url("./assets/spr_redpackage.png")no-repeat -340px -478px;
+      width:392px;
+      height:333px;
+      top:0px;
+      left:0px;
+      animation:coruscate .4s ease-in-out;
+    }
+
+    .gorge-war .clound1,.gorge-war .clound2{
+      animation:clound-float-left 20s linear infinite;
+    }
+
+    .gorge-war .clound3{
+      animation:clound-float-right 20s linear infinite;
+    }
+
 
   </style>
 </head>
@@ -237,33 +259,77 @@
     </section>
 
     <!--新品限时乐购-->
-    <section class="news-time-limit">
+    <section class="news-time-limit active">
       <h2 class="title"></h2>
+      <i class="clound-1"></i>
+      <i class="clound-2"></i>
       <ul class="show-cards">
-        <li class="bg-card1"></li>
-        <li class="bg-card2"></li>
-        <li class="bg-card3"></li>
+        <li class="bg-card1 pos1"></li>
+        <li class="bg-card2 pos2"></li>
+        <li class="bg-card3 pos3"></li>
       </ul>
       <i class="content-title"></i>
-      <p>限时时间:2018/02/08-2018/03/07</p>
+      <p class="limit-time">限时时间:2018/02/08-2018/03/07</p>
       <ul class="buy-btn-groups">
+        <li>
+          <p class="top-font-2">参与春晖女神的神秘好礼</p>
+          <span class="first cursor filter"></span>
+        </li>
 
+        <li>
+          <p class="top-font-2">
+            原价19900点券,
+            <b>
+              限时半价<strong>9950</strong>点券
+            </b>
+          </p>
+          <span class="second cursor filter"></span>
+          <p class="bottom-font">
+            2.15-2.28期间半价优惠
+          </p>
+        </li>
       </ul>
-
       <ul class="active-list">
-
+        <li class="card-1 filter">
+          <h3>洛霞情侣皮肤发售</h3>
+          <p>售卖时间:02/13-03/15</p>
+          <span class="buy-now"></span>
+        </li>
+        <li class="card-2 filter">
+          <h3>战争学院的荣耀</h3>
+          <p>活动时间:2月2日开启</p>
+          <span class="join-now"></span>
+        </li>
+        <li class="card-3 filter">
+          <h3>英雄联盟春节回馈</h3>
+          <p>2月11日开启</p>
+          <span class="join-now"></span>
+        </li>
+        <li class="card-4 filter">
+          <h3>情人节限定新品发售</h3>
+          <p>倒计时中！于2月10日结束</p>
+          <span class="buy-now"></span>
+        </li>
+        <li class="card-5 filter">
+          <h3>春节新品手办发售</h3>
+          <p>售卖时间:1.18-2.19</p>
+          <span class="buy-now"></span>
+        </li>
       </ul>
 
     </section>
 
     <!--明星与你同乐-->
-    <section>
-
-    </section>
+    <section style="height: 800px;width: 1200px;margin: 0 auto;"></section>
 
     <!--年装峡谷任你玩-->
-    <section>
-
+    <section class="as-you-play active">
+      <h2 class="title"></h2>
+      <ul class="card-list">
+        <li class="card-1"></li>
+        <li class="card-2"></li>
+        <li class="card-3"></li>
+      </ul>
     </section>
 
     <!--萌春活动齐欢-->

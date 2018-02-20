@@ -65,3 +65,34 @@
   50%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}
   0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
 }
+
+@keyframes coruscate {
+  0%{
+    opacity:.3;
+    transform: scale(1);
+  }
+  100%{
+    opacity:0;
+    transform: scale(1.2);
+    display: none;
+  }
+}
+
+@keyframes clound-float-left {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-300px);
+  }
+}
+
+
+@keyframes clound-float-right {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(300px);
+  }
+}

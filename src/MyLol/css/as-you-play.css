@@ -1,0 +1,56 @@
+.as-you-play {
+  position: relative;
+  width:1200px;
+  margin:0 auto;
+  transition: all 1.4s ;
+  opacity:0;
+  transform: translateY(100px);
+}
+.as-you-play.active{
+  transform: none;
+  opacity:1;
+}
+.as-you-play h2{
+  background: url("../assets/spr_redpackage.png") no-repeat -633px -928px;
+  width:628px;
+  height:202px;
+  margin:0 auto;
+}
+
+.as-you-play .card-list{
+  position: relative;
+  height:400px;
+}
+.as-you-play .card-list .li{
+  display: inline-block;
+}
+
+.as-you-play .card-list  .card-1{
+  position: absolute;
+  background: url("../assets/spr_redpackage.png")no-repeat -508px 0;
+  width:577px;
+  height:323px;
+  top:-28px;
+  left:-185px;
+}
+
+
+
+.as-you-play .card-list  .card-2{
+  position: absolute;
+  background: url("../assets/spr_redpackage.png")no-repeat -1422px -207px;
+  width:392px;
+  height:295px;
+  top:0px;
+  left:400px;
+}
+
+
+.as-you-play .card-list  .card-3{
+  position: absolute;
+  background: url("../assets/spr_redpackage.png")no-repeat -340px -478px;
+  width:392px;
+  height:333px;
+  top:-38px;
+  left:800px;
+}
