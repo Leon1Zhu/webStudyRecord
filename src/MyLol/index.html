@@ -50,6 +50,12 @@
       animation: welfare-bg 1s steps(11,end) infinite;
     }
 
+    .welfare ul:before{
+      animation:swingTopToBottom 4s ease-in-out infinite;
+    }
+    .bg3 .bottom-clound{
+      animation:swingTopToBottom 4s ease-in-out infinite;
+    }
     .test{
       transition: all .5s;
     }
@@ -99,7 +105,9 @@
           <div class="bg1-video-cover "></div>
         </div>
         <div class="bg2"></div>
-        <div class="bg3"></div>
+        <div class="bg3">
+          <i class="bottom-clound"></i>
+        </div>
         <div class="bg4"></div>
       </div>
 
@@ -222,13 +230,29 @@
           <div class="active-btn cursor filter">马上参与</div>
         </li>
       </ul>
-      <div class="test" style=" position: relative;   background: url('./assets/spr_redpackage.png') no-repeat -508px 0;
+     <!-- <div class="test" style=" position: relative;   background: url('./assets/spr_redpackage.png') no-repeat -508px 0;
     width: 577px;
-    height: 323px;"></div>
+    height: 323px;"></div>-->
+
     </section>
 
     <!--新品限时乐购-->
-    <section>
+    <section class="news-time-limit">
+      <h2 class="title"></h2>
+      <ul class="show-cards">
+        <li class="bg-card1"></li>
+        <li class="bg-card2"></li>
+        <li class="bg-card3"></li>
+      </ul>
+      <i class="content-title"></i>
+      <p>限时时间:2018/02/08-2018/03/07</p>
+      <ul class="buy-btn-groups">
+
+      </ul>
+
+      <ul class="active-list">
+
+      </ul>
 
     </section>
 

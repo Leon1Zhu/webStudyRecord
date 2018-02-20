@@ -60,6 +60,17 @@ body, button, input, select, textarea {
 }
 
 
+
+.bg3 .bottom-clound{
+  position: absolute;
+  top:340px;
+  left:0px;
+  background: url("../assets/spr_redpackage.png") no-repeat -340px -816px;
+  width:257px;
+  height:88px;
+}
+
+
 .bg4{
   background: url("../assets/bg4.jpg") no-repeat center;
   width:100%;

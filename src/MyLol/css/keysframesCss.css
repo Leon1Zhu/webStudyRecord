@@ -60,3 +60,8 @@
   0%{  background-position: 0 0;}
   100%{  background-position: -2354px 0;}
 }
+
+@keyframes swingTopToBottom  {
+  50%{-webkit-transform:translateY(-15px);transform:translateY(-15px)}
+  0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}

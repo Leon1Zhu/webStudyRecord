@@ -25,6 +25,16 @@
   height:640px;
   margin:-50px 0 0;
 }
+
+.welfare ul:before{
+  content: '';
+  background: url("../assets/cloud-1.png") no-repeat;
+  width:1604px;
+  height:699px;
+  position: absolute;
+  top:140px;
+  left:-120px;
+}
 .welfare ul li{
   position: absolute;
   box-sizing: border-box;
@@ -32,6 +42,7 @@
 .welfare ul li i{
   transition:  all .2s linear;
 }
+
 
 .welfare ul li h3{
   color: #fff4c7;
