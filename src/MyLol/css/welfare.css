@@ -32,6 +32,27 @@
 .welfare ul li i{
   transition:  all .2s linear;
 }
+
+.welfare ul li h3{
+  color: #fff4c7;
+  font-size:22px;
+  margin:0 0 8px;
+}
+
+.welfare ul li p{
+  color: #ffbb72;
+  font-size:12px;
+}
+
+.welfare ul li .active-btn{
+  font-size:0;
+  float: right;
+  background: url("../assets/spr_redpackage.png") no-repeat -1266px -928px;
+  width:138px;
+  height:53px;
+  margin:10px 0 0 -4px;
+}
+
 .welfare .welfare-1{
   background: url("../assets/welfare-1.png") no-repeat;
   width:667px;
@@ -48,6 +69,12 @@
   position: absolute;
   top:0;
   right:0;
+}
+.welfare .welfare-1 .icon-1:hover{
+  transform: scale(1.1) translate(20px,-10px);
+}
+.welfare .welfare-1 .icon-1:hover + .clound-1{
+  transform: translateX(-10px);
 }
 .welfare .welfare-1 .clound-1{
   background: url("../assets/spr_redpackage.png") no-repeat -587px -1463px;
@@ -79,6 +106,8 @@
   left:0;
 }
 
+
+
 .welfare .welfare-2 .clound-1{
   background: url("../assets/spr_redpackage.png")no-repeat -982px -522px;
   width:92px;
@@ -86,6 +115,13 @@
   position: absolute;
   top:260px;
   left:175px;
+}
+
+.welfare .welfare-2 .icon-1:hover{
+  transform: translate(-10px,0px);
+}
+.welfare .welfare-2 .icon-1:hover + .clound-1{
+  transform: translateX(-10px);
 }
 
 .welfare .welfare-3{
@@ -105,7 +141,7 @@
   height:262px;
   position: absolute;
   top:0;
-  left:0;
+  right:0;
 }
 .welfare .welfare-3 .icon-1 .card{
   background: url("../assets/ws-3-card.png")no-repeat ;
@@ -136,7 +172,17 @@
   height:46px;
   position: absolute;
   top:210px;
-  left:80px;
+  right:80px;
+}
+.welfare .welfare-3 .icon-1:hover{
+  transform: rotate(10deg);
+}
+.welfare .welfare-3 .icon-1:hover .card{
+  transform: translateY(-15px);
+}
+
+.welfare .welfare-3 .icon-1:hover + .clound-1{
+  transform: translateX(-10px);
 }
 
 

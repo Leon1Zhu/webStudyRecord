@@ -50,6 +50,30 @@
       animation: welfare-bg 1s steps(11,end) infinite;
     }
 
+    .test{
+      transition: all .5s;
+    }
+    @keyframes coruscate {
+      0%{
+        opacity:.5;
+        transform: scale(1);
+      }
+      100%{
+        opacity:0;
+        transform: scale(1.2);
+      }
+    }
+    .test:hover:before{
+      content: ' ';
+      background: url('./assets/spr_redpackage.png') no-repeat -508px 0;
+      width: 577px;
+      height: 323px;
+      position: absolute;
+      top:0;
+      left:0;
+      animation:coruscate .2s ease-in-out
+    }
+
   </style>
 </head>
 <body onload="padintNavDom()">
@@ -169,14 +193,14 @@
           <h3>齐聚春晖·集卡赢永久皮肤</h3>
           <p>收集春节套牌即可兑换永久皮肤等奖励</p>
           <p>每日进行游戏，登陆活动页面均可获得卡包</p>
-          <div class="active-btn">马上参与</div>
+          <div class="active-btn cursor filter">马上参与</div>
         </li>
         <li class="welfare-2">
           <i class="icon-1"></i>
           <i class="clound-1"></i>
           <h3>春晖女神的神秘礼物</h3>
           <p>珍稀守卫限时销售 开启神秘礼物</p>
-          <div class="active-btn">马上参与</div>
+          <div class="active-btn cursor filter">马上参与</div>
         </li>
         <li class="welfare-3">
           <i class="icon-1">
@@ -187,7 +211,7 @@
           <h3>英雄联盟皮肤红包</h3>
           <p>今年，用皮肤红包给小伙伴拜年吧</p>
           <p>活动时间：2月8日开启</p>
-          <div class="active-btn">马上参与</div>
+          <div class="active-btn cursor filter">马上参与</div>
         </li>
         <li class="welfare-4">
           <i class="icon-1"></i>
@@ -195,9 +219,12 @@
           <h3>新春拜年礼物</h3>
           <p>千万英雄皮肤免费奖励，进入游戏即可领取</p>
           <p>活动时间：2月9日—3月2日</p>
-          <div class="active-btn">马上参与</div>
+          <div class="active-btn cursor filter">马上参与</div>
         </li>
       </ul>
+      <div class="test" style=" position: relative;   background: url('./assets/spr_redpackage.png') no-repeat -508px 0;
+    width: 577px;
+    height: 323px;"></div>
     </section>
 
     <!--新品限时乐购-->
