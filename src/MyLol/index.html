@@ -29,6 +29,8 @@
   <script src="./js/nav.js" ></script>
   <!--导航js-->
   <script src="./js/data.js" ></script>
+  <!--视差滚动-->
+  <script src="./js/scroller.js" ></script>
   <style>
     .play-video span{
       animation: play-video-span 3s ease-in-out infinite;
@@ -54,7 +56,7 @@
       animation: welfare-bg 1s steps(11,end) infinite;
     }
 
-    .welfare ul:before,.bg3 .bottom-clound,.news-time-limit .clound-1,.news-time-limit .clound-2{
+    .welfare ul:before,.bg3 .bottom-clound,.news-time-limit .clound-1,.news-time-limit .clound-2,.bg4 .clound-1,.bg4 .clound-2{
       animation:swingTopToBottom 4s ease-in-out infinite;
     }
 
@@ -93,18 +95,18 @@
       animation:coruscate .4s ease-in-out;
     }
 
-    .gorge-war .clound1,.gorge-war .clound2{
+    .gorge-war .clound1,.gorge-war .clound2,.bg4 .clound-4{
       animation:clound-float-left 20s linear infinite;
     }
 
-    .gorge-war .clound3{
+    .gorge-war .clound3,.bg4 .clound-3{
       animation:clound-float-right 20s linear infinite;
     }
 
 
   </style>
 </head>
-<body onload="padintNavDom()">
+<body >
 <div class="main-content">
   <!--导航样式-->
   <nav class="activity-nav">
@@ -130,7 +132,12 @@
         <div class="bg3">
           <i class="bottom-clound"></i>
         </div>
-        <div class="bg4"></div>
+        <div class="bg4">
+          <div class="clound-1"></div>
+          <div class="clound-2"></div>
+          <div class="clound-3"></div>
+          <div class="clound-4"></div>
+        </div>
       </div>
 
 
@@ -333,8 +340,12 @@
     </section>
 
     <!--萌春活动齐欢-->
-    <section>
-
+    <section class=last-step">
+      <h2 class="title"></h2>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
     </section>
   </section>
 
@@ -351,7 +362,8 @@
   }
   function padintNavDom(){
     let nav_dom = navDom(myLol.navListDom)
-
   }
+  padintNavDom()
+
 </script>
 </html>

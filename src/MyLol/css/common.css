@@ -77,6 +77,47 @@ body, button, input, select, textarea {
   height:2099px;
   position: relative;
 }
+
+.bg4 .clound-1{
+  background: url("../assets/spr_redpackage.png") no-repeat -508px -328px;
+  position: absolute;
+  width: 360px;
+  height: 78px;
+  bottom: 860px;
+  left: 0;
+}
+
+
+.bg4 .clound-2{
+  background: url("../assets/spr_redpackage.png") no-repeat -737px -666px;
+  position: absolute;
+  width: 316px;
+  height: 89px;
+  bottom: 770px;
+  right: 0;
+}
+
+.bg4 .clound-3{
+  background: url("../assets/spr_redpackage.png") no-repeat no-repeat -1796px -923px;
+  width: 166px;
+  height: 27px;
+  position: absolute;
+  bottom: 270px;
+  left: 350px;
+}
+
+
+
+.bg4 .clound-4{
+  background: url("../assets/spr_redpackage.png") no-repeat no-repeat -1796px -923px;
+  width: 166px;
+  height: 27px;
+  position: absolute;
+  bottom: 190px;
+  left: 1243px;
+  animation-delay: 1s;
+}
+
 .filter{
   transition: filter .3s;
 }
