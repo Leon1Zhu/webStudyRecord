@@ -5,7 +5,7 @@
   opacity:0;
   transform:translateY(100px) ;
 
-  transition: all 1.4s;
+  transition: all 1.4s ease .1s;
   position: relative;
 }
 .red-package-page .content{

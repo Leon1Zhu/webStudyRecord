@@ -22,12 +22,18 @@
 }
 
 
-@keyframes leftToRight {
-  25%,75%{
-    transform: translateX(40px);
-  }
+@keyframes ToRight {
   50%{
     transform: translateX(-40px);
+  }
+  0%,100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes ToLeft {
+  50%{
+    transform: translateX(40px);
   }
   0%,100%{
     transform: translateX(0);

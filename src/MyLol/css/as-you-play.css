@@ -2,7 +2,7 @@
   position: relative;
   width:1200px;
   margin:0 auto;
-  transition: all 1.4s ;
+  transition: all 1.4s ease .1s;
   opacity:0;
   transform: translateY(100px);
 }

@@ -1,5 +1,5 @@
 .welfare{
-  transition: all 1.4s;
+  transition: all 1.4s ease .1s;
   transform: translateY(100px);
   opacity:0;
   height:1000px;

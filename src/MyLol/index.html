@@ -23,14 +23,19 @@
   <link rel="stylesheet" href="./css/news-time-limit.css" charset="utf-8">
   <!--年装峡谷任你玩-->
   <link rel="stylesheet" href="./css/as-you-play.css" charset="utf-8">
+  <!--鼠标滚动-->
+  <script src="./js/scroll.js" ></script>
+  <!--鼠标滚动-->
+  <script src="./js/mouseWheel.js" ></script>
+  <!--视差滚动-->
+  <script src="./js/scroll.js" ></script>
   <!--工具类-->
   <script src="./js/util.js" ></script>
   <!--导航js-->
   <script src="./js/nav.js" ></script>
   <!--导航js-->
   <script src="./js/data.js" ></script>
-  <!--视差滚动-->
-  <script src="./js/scroller.js" ></script>
+
   <style>
     .play-video span{
       animation: play-video-span 3s ease-in-out infinite;
@@ -41,10 +46,13 @@
     .first-page .bottom-btn i{
       animation:arrow-bottom 2s infinite;
     }
-    .left-to-right{
-      animation:leftToRight 8s ease-in-out infinite;
+    .to-right{
+      animation:ToRight 4s ease-in-out infinite;
     }
-    .left-to-right .left-card,.left-to-right .right-card{
+    .to-left{
+      animation:ToLeft 4s ease-in-out infinite;
+    }
+    .to-left .left-card,.to-left .right-card{
       animation:cardRotate 20s ease-in-out infinite;
     }
     .red-package-page .qr-icon{
@@ -160,10 +168,10 @@
     </section>
 
     <!--五福临盟，红包贺岁-->
-    <section class="red-package-page active">
-       <div class="red-package-bg1 left-to-right"></div>
-       <div class="red-package-bg2 left-to-right"></div>
-       <div class="red-package-bgs left-to-right">
+    <section class="red-package-page ">
+       <div class="red-package-bg1 to-right "></div>
+       <div class="red-package-bg2 to-left"></div>
+       <div class="red-package-bgs to-left">
            <div class="left-card "></div>
            <div class="right-card"></div>
        </div>
@@ -184,10 +192,10 @@
     </section>
 
     <!--峡谷战新春-->
-    <section class="gorge-war active">
-      <div class="bg1 left-to-right"></div>
-      <div class="bg2 left-to-right"></div>
-      <div class="bgs left-to-right">
+    <section class="gorge-war ">
+      <div class="bg1 to-right"></div>
+      <div class="bg2 to-left"></div>
+      <div class="bgs to-left">
         <div class="left-card"></div>
         <div class="right-card"></div>
       </div>
@@ -221,7 +229,7 @@
     </section>
 
     <!--新禧福利畅想-->
-    <section class="welfare active">
+    <section class="welfare ">
       <h2>新春福利畅想</h2>
       <ul>
         <li class="welfare-1">
@@ -266,7 +274,7 @@
     </section>
 
     <!--新品限时乐购-->
-    <section class="news-time-limit active">
+    <section class="news-time-limit ">
       <h2 class="title"></h2>
       <i class="clound-1"></i>
       <i class="clound-2"></i>
@@ -330,7 +338,7 @@
     <section style="height: 800px;width: 1200px;margin: 0 auto;"></section>
 
     <!--年装峡谷任你玩-->
-    <section class="as-you-play active">
+    <section class="as-you-play ">
       <h2 class="title"></h2>
       <ul class="card-list">
         <li class="card-1"></li>

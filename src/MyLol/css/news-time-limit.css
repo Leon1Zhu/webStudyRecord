@@ -4,7 +4,7 @@
   width:1200px;
   margin:0 auto;
   position: relative;
-  transition: all 1.4s;
+  transition: all 1.4s ease .1s;
 }
 
 .news-time-limit.active{

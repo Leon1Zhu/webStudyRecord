@@ -1,6 +1,6 @@
 .gorge-war{
   transform: translateY(100px);
-  transition: all 1.4s;
+  transition: all 1.4s ease .1s;
   opacity:0;
   margin:100px auto 80px;
   position: relative;
