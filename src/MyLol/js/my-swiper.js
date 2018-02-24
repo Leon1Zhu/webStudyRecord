@@ -22,7 +22,6 @@
        card2.style = null;
        card3.style = null;
      }
-     console.log(card1.style)
 
 
   },4000)

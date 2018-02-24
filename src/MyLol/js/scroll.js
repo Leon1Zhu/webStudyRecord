@@ -4,8 +4,10 @@
 var scrollTemp = null;
 window.onscroll = function(){
   scrollTemp = document.documentElement.scrollTop;
+  /*(scrollTemp >40 && (document.body.style.paddingTop !== '142px')) && changeTop();*/
+  (scrollTemp === 0  && (document.body.style.paddingTop === '142px')) && changeUp();
     switch(true){
-      case 800<= scrollTemp <=2000:  RedPackagePage();
+      case 240<= scrollTemp <=2000:  RedPackagePage();
       case 1100<= scrollTemp <= 3000 : gorgeWar();
       case 2100<= scrollTemp <= 4000 : welfare();
       case 3100<= scrollTemp <=5200 : newsTimeLimit();
@@ -15,13 +17,27 @@ window.onscroll = function(){
     }
 
  }
+//通过scroll触发修改paddingtop
+/*function changeTop(){
+  console.log(document.documentElement.scroll)
+  console.log(document.body.style.paddingTop)
+  document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
+    document.body.style.paddingTop = '142px';
+}*/
+
+function changeUp(){
+  document.body.style.paddingTop = '0px';
+  setTimeout(function(){
+    document.getElementsByClassName('activity-nav')[0].style.position = 'relative'
+  },400)
+}
 
 function RedPackagePage(){
    var redPagePack = document.getElementsByClassName('red-package-page')[0];
   var bg1 = document.getElementsByClassName('red-package-bg1')[0];
   var bg2 = document.getElementsByClassName('red-package-bg2')[0];
   var bg3 = document.getElementsByClassName('red-package-bgs')[0];
-   if(scrollTemp >= 880 && scrollTemp <= 1749){
+   if(scrollTemp >= 340 && scrollTemp <= 1749){
      if(addActive(redPagePack)){
        setTimeout(function(){
          (bg1.className.indexOf(' to-right') >0)|| (bg1.className = bg1.className+ ' to-right');
@@ -31,7 +47,7 @@ function RedPackagePage(){
      }
    }
 
-  if(scrollTemp <= 880 || scrollTemp > 1920){
+  if(scrollTemp <= 243 || scrollTemp > 1920){
     if(removeActive(redPagePack)){
       (bg1.className.indexOf(' to-right') >0) && (bg1.className = bg1.className.replace(' to-right',''));
       (bg2.className.indexOf(' to-left') >0)&& (bg2.className = bg2.className.replace(' to-left',''));

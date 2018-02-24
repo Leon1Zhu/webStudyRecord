@@ -215,6 +215,7 @@
   position: absolute;
   bottom:30px;
   left:86px;
+  transform-origin: bottom center;
 }
 .welfare .welfare-4 .clound-1{
   background: url("../assets/spr_redpackage.png") no-repeat -873px -372px;

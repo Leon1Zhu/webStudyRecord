@@ -102,3 +102,18 @@
     transform: translateX(300px);
   }
 }
+
+@keyframes wefare-bg4-hover {
+  0%,65%{
+    transform: scale3d(1,1,1);
+  }
+  5%,15%,25%,35%,45%{
+    transform: scale3d(1.2,1.2,1)  rotate3d(1,1,1,3deg);
+
+  }
+  10%,20%,30%,40%,50%{
+    transform: scale3d(1.2,1.2,1)  rotate3d(1,1,1,-3deg);
+  }
+
+
+}

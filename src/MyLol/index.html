@@ -69,7 +69,9 @@
     .welfare-4 .icon-1{
       animation: welfare-bg 1s steps(11,end) infinite;
     }
-
+    .welfare .welfare-4 .icon-1:hover{
+      animation: wefare-bg4-hover 2s infinite;
+    }
     .welfare ul:before,.bg3 .bottom-clound,.news-time-limit .clound-1,.news-time-limit .clound-2,.bg4 .clound-1,.bg4 .clound-2{
       animation:swingTopToBottom 4s ease-in-out infinite;
     }
@@ -391,6 +393,10 @@
     let nav_dom = navDom(myLol.navListDom)
   }
   padintNavDom()
+  if(document.documentElement.scrollTop >0 ){
+    document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
+    document.body.style.paddingTop = '142px';
+  }
 
 </script>
 </html>

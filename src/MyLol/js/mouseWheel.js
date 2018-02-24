@@ -58,12 +58,10 @@ function scrollTo945(){
   disabledMouseWheel();
   setTimeout(mouseWheel,500)
   document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
-  setTimeout(function(){
-    document.body.style.paddingTop = '142px';
-  },40)
+  document.body.style.paddingTop = '142px';
     var scrollTemp = document.documentElement.scrollTop;
     var scrollHeight = scrollDownHeigh - scrollTemp;
-    var len = Math.floor(scrollHeight/step),i=1;
+    var len = Math.floor(scrollHeight/step),i=0;
     var first_length = scrollHeight % step
     clearInterval(timer)
     timer = setInterval(function(){
@@ -78,12 +76,10 @@ function scrollTo945(){
 function scrollTo0(){
   disabledMouseWheel();
   setTimeout(mouseWheel,500)
-  setTimeout(function(){
-    document.body.style.paddingTop = '0px';
-  },80)
+  document.body.style.paddingTop = '0px';
     var scrollTemp = document.documentElement.scrollTop;
     var scrollHeight = scrollTemp - 0;
-    var len = Math.floor(scrollHeight/step),i=1;
+    var len = Math.floor(scrollHeight/step),i=0;
     var last_langth =scrollHeight % step;
     clearInterval(timer)
     timer = setInterval(function(){
@@ -99,9 +95,6 @@ function scrollTo0(){
 function clearTimerDown(){
   clearInterval(timer);
   setTimeout(function(){
-    /*console.log(document.documentElement.scrollTop)
-    scrollerFlag = true;
-    mouseWheel();*/
     scrollerLastValue = scrollDownHeigh;
   },10)
 }
