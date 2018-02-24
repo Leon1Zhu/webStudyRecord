@@ -12,6 +12,7 @@
   transform: none;
 }
 .play-with-star .title{
+  margin:0 auto;
   background: url("../assets/spr_redpackage.png")no-repeat -1422px 0;
   width:628px;
   height:202px;

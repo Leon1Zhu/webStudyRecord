@@ -4,12 +4,16 @@
 var scrollTemp = null;
 window.onscroll = function(){
   scrollTemp = document.documentElement.scrollTop;
-    RedPackagePage();
-    gorgeWar();
-    welfare();
-    newsTimeLimit();
-    asYouPlay();
-    lastStep();
+    switch(true){
+      case 800<= scrollTemp <=2000:  RedPackagePage();
+      case 1100<= scrollTemp <= 3000 : gorgeWar();
+      case 2100<= scrollTemp <= 4000 : welfare();
+      case 3100<= scrollTemp <=5200 : newsTimeLimit();
+      case 4250<= scrollTemp <=6000 : playWithStar();
+      case 5100<= scrollTemp <=6600 : asYouPlay();
+      case 5700<= scrollTemp : lastStep();
+    }
+
  }
 
 function RedPackagePage(){
@@ -78,22 +82,33 @@ function newsTimeLimit(){
   }
 }
 
+function playWithStar(){
+  var playWithStar = document.getElementsByClassName('play-with-star')[0];
+  if(scrollTemp >= 4430 && scrollTemp <= 5910){
+    addActive(playWithStar)
+  }
+  if(scrollTemp <= 4300 || scrollTemp > 5910 ){
+    removeActive(playWithStar)
+  }
+}
+
+
 function asYouPlay(){
   var asYouPlay = document.getElementsByClassName('as-you-play')[0];
-  if(scrollTemp >= 5220 ){
+  if(scrollTemp >= 5220 && scrollTemp <= 6500){
     addActive(asYouPlay)
   }
-  if(scrollTemp <= 5120 ){
+  if(scrollTemp <= 5120 || scrollTemp > 6500 ){
     removeActive(asYouPlay)
   }
 }
 
 function lastStep(){
   var lastStep = document.getElementsByClassName('last-step')[0];
-  if(scrollTemp >= 5820 && scrollTemp <= 6580){
+  if(scrollTemp >= 5820 ){
     addActive(lastStep)
   }
-  if(scrollTemp <= 5720 || scrollTemp > 6580){
+  if(scrollTemp <= 5720 ){
     removeActive(lastStep)
   }
 }

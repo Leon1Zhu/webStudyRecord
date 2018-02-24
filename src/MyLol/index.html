@@ -39,6 +39,8 @@
   <script src="./js/nav.js" ></script>
   <!--导航js-->
   <script src="./js/data.js" ></script>
+  <!--swiper滚动-->
+  <script src="./js/my-swiper.js"></script>
 
   <style>
     .play-video span{
@@ -339,7 +341,7 @@
     </section>
 
     <!--明星与你同乐-->
-    <section class="play-with-star" style="height: 800px;width: 1200px;margin: 0 auto;">
+    <section class="play-with-star" >
       <div class="title"></div>
     </section>
 
@@ -384,7 +386,6 @@
 <script>
   var myLol={
       navListDom:navListDomData,
-
   }
   function padintNavDom(){
     let nav_dom = navDom(myLol.navListDom)

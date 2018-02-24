@@ -5,6 +5,9 @@ html,body{
   position: relative;
   zoom: 1;
 }
+body{
+  transition: all .4s;
+}
 
 body, button, input, select, textarea {
   font: 12px/1.5 tahoma,'\5b8b\4f53',sans-serif;
