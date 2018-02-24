@@ -72,7 +72,7 @@
   transform: none;
 }
 
-.red-package-page.active .red-package-bg1,.red-package-page.active .red-package-bg2,.red-package-page .red-package-bg3{
+.red-package-page.active .red-package-bg1,.red-package-page.active .red-package-bg2,.red-package-page.active .red-package-bgs{
   transform: scale(1);
 }
 

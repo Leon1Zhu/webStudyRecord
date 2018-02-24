@@ -26,11 +26,6 @@ mouseWheel();
 
 function scrollFunc(e){
 
-  if(!scrollerFlag){
-    disabledMouseWheel();
-    return;
-  }
-
   var scrollTop = document.documentElement.scrollTop;
   (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
   (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
@@ -60,29 +55,35 @@ function scrollFuncT(evt) {
 
 
 function scrollTo945(){
-  scrollerFlag = false;
+  disabledMouseWheel();
+  setTimeout(mouseWheel,500)
+  /*scrollerFlag = false;*/
   var scrollTemp = document.documentElement.scrollTop;
   var scrollHeight = scrollDownHeigh - scrollTemp;
   var len = Math.floor(scrollHeight/step),i=1;
   var first_length = scrollHeight % step
   clearInterval(timer)
   timer = setInterval(function(){
+    if(i>len) return;
     i==0 ?  window.scrollTo(0,first_length) : window.scrollTo(0,i*step+first_length);
-    i === len && (clearTimerDown(),i=0)
+    i === len && clearTimerDown()
     i++;
   },10)
 }
 
 function scrollTo0(){
-  scrollerFlag = false;
+  disabledMouseWheel();
+  setTimeout(mouseWheel,500)
+ /* scrollerFlag = false;*/
   var scrollTemp = document.documentElement.scrollTop;
   var scrollHeight = scrollTemp - 0;
   var len = Math.floor(scrollHeight/step),i=1;
   var last_langth =scrollHeight % step;
   clearInterval(timer)
   timer = setInterval(function(){
+    if(i>len) return;
     i==0 ?  window.scrollTo(0,scrollTemp - last_langth) : window.scrollTo(0,scrollTemp -(i*step+last_langth));
-    i === len && (clearTimerUp(),i=0)
+    i === len && clearTimerUp()
     i++;
   },10)
 }
@@ -90,20 +91,20 @@ function scrollTo0(){
 function clearTimerDown(){
   clearInterval(timer);
   setTimeout(function(){
-    console.log(document.documentElement.scrollTop)
+    /*console.log(document.documentElement.scrollTop)
     scrollerFlag = true;
-    mouseWheel();
+    mouseWheel();*/
     scrollerLastValue = scrollDownHeigh;
-  },15)
+  },10)
 }
 
 
 function clearTimerUp(){
   clearInterval(timer);
   setTimeout(function(){
-    scrollerFlag = true;
-    mouseWheel();
+   /* scrollerFlag = true;
+    mouseWheel();*/
     scrollerLastValue = 0;
-  },15)
+  },10)
 
 }

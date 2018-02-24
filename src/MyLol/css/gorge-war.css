@@ -10,7 +10,7 @@
   transform: none;
   opacity:1;
 }
-.gorge-war .bg1{
+.gorge-war .war-bg1{
   background: url("../assets/gw-decorate-1.png") no-repeat;
   width:1507px;
   height:752px;
@@ -22,12 +22,12 @@
   transform: scale(0);
 }
 
-.gorge-war.active .bg1{
+.gorge-war.active .war-bg1{
   transform: scale(1);
 }
 
 
-.gorge-war .bg2{
+.gorge-war .war-bg2{
   background: url("../assets/gw-decorate-2.png") no-repeat;
   width:1556px;
   height:700px;
@@ -39,12 +39,12 @@
   transform: scale(0);
 }
 
-.gorge-war.active .bg2{
+.gorge-war.active .war-bg2{
   transform: scale(1);
 }
 
 
-.gorge-war .bgs{
+.gorge-war .war-bgs{
   width:1556px;
   height:700px;
   position: absolute;
@@ -55,11 +55,11 @@
   transform: scale(0);
 }
 
-.gorge-war.active .bgs{
+.gorge-war.active .war-bgs{
   transform: scale(1);
 }
 
-.gorge-war .bgs .left-card{
+.gorge-war .war-bgs .left-card{
   position: absolute;
   top:220px;
   left:70px;
@@ -67,7 +67,7 @@
   width:199px;
   height:142px;
 }
-.gorge-war .bgs .right-card{
+.gorge-war .war-bgs .right-card{
   position: absolute;
   top:150px;
   right:70px;

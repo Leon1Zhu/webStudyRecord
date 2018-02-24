@@ -1,0 +1,57 @@
+.last-step{
+  transform: translateY(100px);
+  transition: all 1.4s ease .1s;
+  opacity:0;
+  margin:100px auto 80px;
+  position: relative;
+  width:1200px;
+}
+.last-step.active{
+  opacity:1;
+  transform: none;
+}
+.last-step .title{
+  background: url("../assets/spr_redpackage.png") no-repeat 0 -928px;
+  width:628px;
+  height:202px;
+  margin:0 auto;
+}
+.last-step ul{
+  width:1215px;
+  height:228px;
+  margin:46px 0 0;
+}
+.last-step ul li{
+  display: inline-block;
+  margin-right:13px;
+  width:592px;
+  height:228px;
+  position: relative;
+  transition: all .2s linear;
+}
+.last-step ul li:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px black;
+
+}
+.last-step ul .last-left-card{
+  background: url("../assets/more-act-1.jpg")no-repeat;
+}
+
+.last-step ul .last-right-card{
+  background: url("../assets/more-act-2.jpg");
+}
+.last-step ul li p{
+  width:100%;
+  height:50px;
+  position: absolute;
+  bottom:0px;
+  left:0px;
+  line-height: 50px;
+  background: rgba(0,0,0,.5);
+  color: #fef0db;
+  font-size:16px;
+  text-align: center;
+  text-shadow: 0 3px 7px #000;
+
+}

@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="./css/news-time-limit.css" charset="utf-8">
   <!--年装峡谷任你玩-->
   <link rel="stylesheet" href="./css/as-you-play.css" charset="utf-8">
+  <!--萌春活动齐欢-->
+  <link rel="stylesheet" href="./css/last-step.css" charset="utf-8">
   <!--鼠标滚动-->
   <script src="./js/scroll.js" ></script>
   <!--鼠标滚动-->
@@ -47,13 +49,13 @@
       animation:arrow-bottom 2s infinite;
     }
     .to-right{
-      animation:ToRight 4s ease-in-out infinite;
+      animation:ToRight 4s ease-in-out 3.3s infinite;
     }
     .to-left{
-      animation:ToLeft 4s ease-in-out infinite;
+      animation:ToLeft 4s ease-in-out 3.3s infinite;
     }
     .to-left .left-card,.to-left .right-card{
-      animation:cardRotate 20s ease-in-out infinite;
+      animation:cardRotate 20s ease-in-out 3.3s infinite;
     }
     .red-package-page .qr-icon{
       animation: rotateIcon 2s linear infinite;
@@ -169,9 +171,9 @@
 
     <!--五福临盟，红包贺岁-->
     <section class="red-package-page ">
-       <div class="red-package-bg1 to-right "></div>
-       <div class="red-package-bg2 to-left"></div>
-       <div class="red-package-bgs to-left">
+       <div class="red-package-bg1"></div>
+       <div class="red-package-bg2"></div>
+       <div class="red-package-bgs">
            <div class="left-card "></div>
            <div class="right-card"></div>
        </div>
@@ -193,9 +195,9 @@
 
     <!--峡谷战新春-->
     <section class="gorge-war ">
-      <div class="bg1 to-right"></div>
-      <div class="bg2 to-left"></div>
-      <div class="bgs to-left">
+      <div class="war-bg1"></div>
+      <div class="war-bg2"></div>
+      <div class="war-bgs">
         <div class="left-card"></div>
         <div class="right-card"></div>
       </div>
@@ -348,11 +350,23 @@
     </section>
 
     <!--萌春活动齐欢-->
-    <section class=last-step">
+    <section class="last-step active">
       <h2 class="title"></h2>
       <ul>
-        <li></li>
-        <li></li>
+        <li class="last-left-card cursor filter">
+          <div>
+            <p>
+              参加春节同人创作，赢取2018春节皮肤和500Q币奖励
+            </p>
+          </div>
+        </li>
+        <li class="last-right-card cursor filter">
+          <div>
+            <p>
+              五福临盟：直播平台春节特色活动
+            </p>
+          </div>
+        </li>
       </ul>
     </section>
   </section>
