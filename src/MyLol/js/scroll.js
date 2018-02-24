@@ -9,7 +9,7 @@ window.onscroll = function(){
     welfare();
     newsTimeLimit();
     asYouPlay();
-
+    lastStep();
  }
 
 function RedPackagePage(){
@@ -80,11 +80,21 @@ function newsTimeLimit(){
 
 function asYouPlay(){
   var asYouPlay = document.getElementsByClassName('as-you-play')[0];
-  if(scrollTemp >= 5220 && scrollTemp <= 6580){
+  if(scrollTemp >= 5220 ){
     addActive(asYouPlay)
   }
-  if(scrollTemp <= 5120 || scrollTemp > 6580){
+  if(scrollTemp <= 5120 ){
     removeActive(asYouPlay)
+  }
+}
+
+function lastStep(){
+  var lastStep = document.getElementsByClassName('last-step')[0];
+  if(scrollTemp >= 5820 && scrollTemp <= 6580){
+    addActive(lastStep)
+  }
+  if(scrollTemp <= 5720 || scrollTemp > 6580){
+    removeActive(lastStep)
   }
 }
 

@@ -1,0 +1,18 @@
+.play-with-star{
+  width:1200px;
+  margin:0 auto;
+  height:800px;
+  position: relative;
+  opacity:0;
+  transform: translateY(100px);
+  transition: all 1.4s ease .1s;
+}
+.play-with-star.active{
+  opacity:1;
+  transform: none;
+}
+.play-with-star .title{
+  background: url("../assets/spr_redpackage.png")no-repeat -1422px 0;
+  width:628px;
+  height:202px;
+}
