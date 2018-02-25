@@ -413,7 +413,7 @@
     }
   }
   window.onload = function(){
-    if( getScrollTop() >0 ){
+    if( (document.documentElement.scrollTop || window.pageYOffset) >0 ){
       document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
       document.body.style.paddingTop = '142px';
     }

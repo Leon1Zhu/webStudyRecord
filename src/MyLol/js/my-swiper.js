@@ -13,7 +13,6 @@
      var card1 = document.getElementsByClassName('bg-card1')[0];
      var card2 = document.getElementsByClassName('bg-card2')[0];
      var card3 = document.getElementsByClassName('bg-card3')[0];
-     console.log(card1.className)
      if(card1.className.indexOf(' pos1')>0 && card3.className.indexOf(' pos3') >0){
        card1.style.zIndex = 3;
        card2.style.zIndex = 2;

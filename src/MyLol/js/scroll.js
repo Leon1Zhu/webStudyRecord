@@ -34,9 +34,9 @@ function changeUp(){
 
 function RedPackagePage(){
    var redPagePack = document.getElementsByClassName('red-package-page')[0];
-  var bg1 = document.getElementsByClassName('red-package-bg1')[0];
-  var bg2 = document.getElementsByClassName('red-package-bg2')[0];
-  var bg3 = document.getElementsByClassName('red-package-bgs')[0];
+   var bg1 = document.getElementsByClassName('red-package-bg1')[0];
+   var bg2 = document.getElementsByClassName('red-package-bg2')[0];
+   var bg3 = document.getElementsByClassName('red-package-bgs')[0];
    if(scrollTemp >= 340 && scrollTemp <= 1749){
      if(addActive(redPagePack)){
        setTimeout(function(){

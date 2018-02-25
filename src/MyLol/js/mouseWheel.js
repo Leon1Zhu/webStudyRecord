@@ -28,9 +28,6 @@ function scrollFunc(e){
 
   (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
   (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
-  console.log(e)
-  console.log(e.deltaY)
-  console.log(scrollTop)
   e.stopPropagation();
 }
 
