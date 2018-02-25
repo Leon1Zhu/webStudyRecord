@@ -6,7 +6,7 @@ html,body{
   zoom: 1;
 }
 body{
-  transition: all .3s;
+  transition: all .4s;
 }
 
 body, button, input, select, textarea {

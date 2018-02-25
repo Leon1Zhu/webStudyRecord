@@ -28,9 +28,9 @@
   <!--明星与你同乐-->
   <link rel="stylesheet" href="./css/play-with-star.css" charset="utf-8">
   <!--鼠标滚动-->
-  <script src="./js/scroll.js" ></script>
-  <!--鼠标滚动-->
   <script src="./js/mouseWheel.js" ></script>
+  <!--界面滚动-->
+  <script src="./js/scroll.js" ></script>
   <!--视差滚动-->
   <script src="./js/scroll.js" ></script>
   <!--工具类-->
@@ -77,6 +77,7 @@
     }
 
     .as-you-play .card-list  .card-1:hover:before{
+      z-index:2;
       content: '';
       position: absolute;
       background: url("./assets/spr_redpackage.png")no-repeat -508px 0;
@@ -88,6 +89,7 @@
     }
 
     .as-you-play .card-list  .card-2:hover:before{
+      z-index:2;
       content: '';
       position: absolute;
       background: url("./assets/spr_redpackage.png")no-repeat -1422px -207px;
@@ -98,9 +100,8 @@
       animation:coruscate .4s ease-in-out;
     }
 
-
-
     .as-you-play .card-list  .card-3:hover:before{
+      z-index:2;
       content: '';
       position: absolute;
       background: url("./assets/spr_redpackage.png")no-repeat -340px -478px;
@@ -141,7 +142,11 @@
   <section class="content">
       <div class="my-bg">
         <div class="bg1">
-          <video autoplay loop muted class="video" src="./assets/1bg.mp4"></video>
+          <video class="video" autoplay="" loop="" muted="">
+            <source id="video_mp4" src="./assets/1bg.mp4" type="video/mp4"></video>
+         <!-- <video autoplay loop muted class="video" >
+            <source src="./assets/1bg.mp4" type='video/mp4'></source>
+          </video>-->
           <div class="bg1-video-cover "></div>
         </div>
         <div class="bg2"></div>
@@ -351,9 +356,9 @@
     <section class="as-you-play ">
       <h2 class="title"></h2>
       <ul class="card-list">
-        <li class="card-1"></li>
-        <li class="card-2"></li>
-        <li class="card-3"></li>
+        <li class="card-1 cursor"></li>
+        <li class="card-2 cursor"></li>
+        <li class="card-3 cursor" ></li>
       </ul>
     </section>
 
@@ -386,17 +391,50 @@
 </body>
 
 <script>
-  var myLol={
+  document.ready = function (callback) {
+    ///兼容FF,Google
+    if (document.addEventListener) {
+      document.addEventListener('DOMContentLoaded', function () {
+        document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+        callback();
+      }, false)
+    }
+    //兼容IE
+    else if (document.attachEvent) {
+      document.attachEvent('onreadytstatechange', function () {
+        if (document.readyState == "complete") {
+          document.detachEvent("onreadystatechange", arguments.callee);
+          callback();
+        }
+      })
+    }
+    else if (document.lastChild == document.body) {
+      callback();
+    }
+  }
+  window.onload = function(){
+    if( getScrollTop() >0 ){
+      document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
+      document.body.style.paddingTop = '142px';
+    }
+  }
+  document.ready(function(){
+    var myLol={
       navListDom:navListDomData,
-  }
-  function padintNavDom(){
-    let nav_dom = navDom(myLol.navListDom)
-  }
-  padintNavDom()
-  if(document.documentElement.scrollTop >0 ){
-    document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
-    document.body.style.paddingTop = '142px';
-  }
+    }
+    function padintNavDom(){
+      let nav_dom = navDom(myLol.navListDom)
+    }
+    padintNavDom()
+    /*setTimeout( function(){
+      if( getScrollTop() >0 ){
+        document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
+        document.body.style.paddingTop = '142px';
+      }
+    } ,0)*/
+
+  })
+
 
 </script>
 </html>

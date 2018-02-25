@@ -3,7 +3,7 @@
  */
 var scrollTemp = null;
 window.onscroll = function(){
-  scrollTemp = document.documentElement.scrollTop;
+  scrollTemp =  getScrollTop();
   /*(scrollTemp >40 && (document.body.style.paddingTop !== '142px')) && changeTop();*/
   (scrollTemp === 0  && (document.body.style.paddingTop === '142px')) && changeUp();
     switch(true){
@@ -127,6 +127,9 @@ function lastStep(){
   if(scrollTemp <= 5720 ){
     removeActive(lastStep)
   }
+}
+function getScrollTop(){
+  return document.documentElement.scrollTop || window.pageYOffset;
 }
 
 function addActive(dom){

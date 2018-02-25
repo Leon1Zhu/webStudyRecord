@@ -1,10 +1,9 @@
 /**
  * Created by zhuliang on 2018/2/21.
  */
-var scrollerLastValue = document.documentElement.scrollTop;
+var scrollerLastValue = getScrollTop();
 var step =30;
 var timer=null;
-var scrollerFlag = true;
 var scrollDownHeigh = 945;
 
 function mouseWheel(){
@@ -25,10 +24,13 @@ mouseWheel();
 
 
 function scrollFunc(e){
+  var scrollTop =  getScrollTop() ;
 
-  var scrollTop = document.documentElement.scrollTop;
   (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
   (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
+  console.log(e)
+  console.log(e.deltaY)
+  console.log(scrollTop)
   e.stopPropagation();
 }
 
@@ -56,10 +58,14 @@ function scrollFuncT(evt) {
 
 function scrollTo945(){
   disabledMouseWheel();
-  setTimeout(mouseWheel,500)
+  setTimeout(mouseWheel,500);
   document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
-  document.body.style.paddingTop = '142px';
-    var scrollTemp = document.documentElement.scrollTop;
+
+  setTimeout(function(){
+    document.body.style.paddingTop = '142px';
+  },50)
+
+    var scrollTemp =  getScrollTop();
     var scrollHeight = scrollDownHeigh - scrollTemp;
     var len = Math.floor(scrollHeight/step),i=0;
     var first_length = scrollHeight % step
@@ -74,10 +80,11 @@ function scrollTo945(){
 }
 
 function scrollTo0(){
+
   disabledMouseWheel();
   setTimeout(mouseWheel,500)
   document.body.style.paddingTop = '0px';
-    var scrollTemp = document.documentElement.scrollTop;
+    var scrollTemp =  getScrollTop();
     var scrollHeight = scrollTemp - 0;
     var len = Math.floor(scrollHeight/step),i=0;
     var last_langth =scrollHeight % step;
@@ -89,7 +96,10 @@ function scrollTo0(){
       i++;
     },10)
 
+}
 
+function getScrollTop(){
+  return document.documentElement.scrollTop || window.pageYOffset;
 }
 
 function clearTimerDown(){
