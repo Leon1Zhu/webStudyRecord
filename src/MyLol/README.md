@@ -188,12 +188,15 @@ function isWeixin(){
  
  一开始直接使用的onscroll函数对滚动事件进行监听
  ![监听代码](http://otdc3q7z7.bkt.clouddn.com/8DC18A0D-58E4-4CE6-9E39-9B714642772E.png)
+ 
  方法体中的每个方法都对应页面中每一个模块的出现与消失的控制
+ 
  ![方法体示例](http://otdc3q7z7.bkt.clouddn.com/07BBA75D-2D74-4927-A1EA-CAFCB405453B.png)
  
  后来发现这个方法问题比较大，每一次都是调用所有方法是一方面，另一方面，只要在高度之外，每次一次滚动都会removeActive，虽然界面上看没有什么变化，但是运算量一下就上来了，导致界面会有些卡顿感觉
  
  经过一番思考，改成滚动到一定区域的高度时，在调用对应的方法
+ 
  ![改动后的onscroll方法体](http://otdc3q7z7.bkt.clouddn.com/8F9B76BB-DB39-4418-A459-9EB7984656A6.png)
  
  感觉应该还有不小的优化空间，后面继续优化这一块
