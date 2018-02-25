@@ -61,7 +61,6 @@ function scrollTo945(){
   setTimeout(function(){
     document.body.style.paddingTop = '142px';
   },50)
-
     var scrollTemp =  getScrollTop();
     var scrollHeight = scrollDownHeigh - scrollTemp;
     var len = Math.floor(scrollHeight/step),i=0;
