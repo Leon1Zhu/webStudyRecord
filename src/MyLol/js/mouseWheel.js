@@ -6,36 +6,26 @@ var step =30;
 var timer=null;
 var scrollDownHeigh = 945;
 
-function mouseWheel(){
-  /*IE注册事件*/
-  if(document.attachEvent){
-    document.attachEvent('onmousewheel',scrollFunc);
-  }
 
-  /*Firefox注册事件*/
-  if(document.addEventListener){
-    document.addEventListener('DOMMouseScroll',scrollFunc,false);
-  }
-  window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome
+function mouseWheel(){
+  EventUtil.removeHander(document,'mousewheel',scrollFuncT)
+  EventUtil.addHader(document,'mousewheel',scrollFunc)
 }
 mouseWheel();
 
 
 
-
 function scrollFunc(e){
+  console.log(e.deltaY)
   var scrollTop =  getScrollTop() ;
-
+  console.log(scrollTop);
   (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
   (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
-  e.stopPropagation();
 }
 
 function disabledMouseWheel() {
-  if (document.addEventListener) {
-    document.addEventListener('DOMMouseScroll', scrollFuncT, false);
-  }//W3C
-  window.onmousewheel = document.onmousewheel = scrollFuncT;//IE/Opera/Chrome
+  EventUtil.removeHander(document,'mousewheel',scrollFunc);
+  EventUtil.addHader(document,'mousewheel',scrollFuncT);
 }
 function scrollFuncT(evt) {
   evt = evt || window.event;

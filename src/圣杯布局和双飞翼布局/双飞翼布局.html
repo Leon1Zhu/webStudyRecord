@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html,body{
+      padding:0;
+      margin:0;
+      width:100%;
+      height:100%;
+      position: relative;
+    }
+    .left,.right,.main{
+      float: left;
+      height:200px;
+      position: relative;
+    }
+    .left{
+      margin-left:-100%;
+      width:200px;
+      background: red;
+    }
+    .main{
+      width:100%;
+      background: yellow;
+      height:200px;
+    }
+    .main-inner{
+      margin:0 200px;
+      height:200px;
+    }
+    .right{
+      margin-left:-100%;
+      float: right;
+      width:200px;
+      background: blue;
+    }
+    .test1,.test2,.test3{
+      width:200px;
+      height:200px;
+    }
+    .test1{
+      background: blue;
+    }
+    .test2{
+      background: black;
+    }
+    .test3{
+      background: pink;
+    }
+    .claerFloat:before{
+      content: ' ';
+      display: block;
+      visibility: hidden;
+      height:0;
+      clear: both;
+    }
+    .claerFloat{
+      zoom: 1;
+    }
+  </style>
+</head>
+<body>
+<div class="main ">
+  <div class="main-inner">
+
+  </div>
+
+</div>
+<div class="left ">
+
+</div>
+
+<div class="right ">
+
+</div>
+<footer class="claerFloat">
+  <div class="test1">111111</div>
+  <div class="test2">222222</div>
+  <div class="test3">3333333</div>
+</footer>
+
+</body>
+</html>

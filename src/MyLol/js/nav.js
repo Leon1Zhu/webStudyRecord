@@ -37,6 +37,6 @@ var navDom = function(data){
 
     }
 
-    ISNULL(data) ? console.error('data is empty') : this.packageDom();
+    EventUtil.ISNULL(data) ? console.error('data is empty') : this.packageDom();
 
 }
