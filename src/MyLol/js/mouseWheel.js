@@ -52,7 +52,7 @@ function scrollFuncT(evt) {
 
 function scrollTo945(){
   disabledMouseWheel();
-  setTimeout(mouseWheel,500);
+  setTimeout(mouseWheel,1500);
   document.getElementsByClassName('activity-nav')[0].style.position = 'fixed'
 
   setTimeout(function(){
@@ -73,9 +73,8 @@ function scrollTo945(){
 }
 
 function scrollTo0(){
-
   disabledMouseWheel();
-  setTimeout(mouseWheel,500)
+  setTimeout(mouseWheel,1500)
   document.body.style.paddingTop = '0px';
     var scrollTemp =  getScrollTop();
     var scrollHeight = scrollTemp - 0;
