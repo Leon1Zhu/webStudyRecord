@@ -25,6 +25,10 @@ function lazyload () {
       }
    })
 }
+
 lazyload();
+
+
+
 
 document.addEventListener("scroll",lazyload)

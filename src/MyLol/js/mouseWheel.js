@@ -5,7 +5,7 @@ var scrollerLastValue = getScrollTop();
 var step =30;
 var timer=null;
 var scrollDownHeigh = 945;
-
+var cacRun = false;
 
 function mouseWheel(){
   EventUtil.removeHander(document,'mousewheel',scrollFuncT)
@@ -16,11 +16,18 @@ mouseWheel();
 
 
 function scrollFunc(e){
-  console.log(e.deltaY)
-  var scrollTop =  getScrollTop() ;
-  console.log(scrollTop);
-  (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
-  (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
+  if(cacRun){
+    return;
+  }
+  cacRun = true;
+  setTimeout(function(){
+    var scrollTop =  getScrollTop() ;
+    console.log(scrollTop);
+    (e.deltaY<0 && scrollTop<880) &&  scrollTo0();
+    (e.deltaY>0 && scrollTop<scrollDownHeigh) &&  scrollTo945();
+    cacRun = false;
+  },1000/60)
+
 }
 
 function disabledMouseWheel() {
@@ -61,7 +68,7 @@ function scrollTo945(){
       i==0 ?  window.scrollTo(0,first_length) : window.scrollTo(0,i*step+first_length);
       i === len && clearTimerDown()
       i++;
-    },10)
+    },1000/60)
 
 }
 
@@ -80,7 +87,7 @@ function scrollTo0(){
       i==0 ?  window.scrollTo(0,scrollTemp - last_langth) : window.scrollTo(0,scrollTemp -(i*step+last_langth));
       i === len && clearTimerUp()
       i++;
-    },10)
+    },1000/60)
 
 }
 
