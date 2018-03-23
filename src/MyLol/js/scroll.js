@@ -2,19 +2,23 @@
  * Created by zhuliang on 2018/2/22.
  */
 var scrollTemp = null;
+var canceTime ;
 window.onscroll = function(){
-  scrollTemp =  getScrollTop();
-  /*(scrollTemp >40 && (document.body.style.paddingTop !== '142px')) && changeTop();*/
-  (scrollTemp === 0  && (document.body.style.paddingTop === '142px')) && changeUp();
-    switch(true){
-      case 240<= scrollTemp <=2000:  RedPackagePage();
-      case 1100<= scrollTemp <= 3000 : gorgeWar();
-      case 2100<= scrollTemp <= 4000 : welfare();
-      case 3100<= scrollTemp <=5200 : newsTimeLimit();
-      case 4250<= scrollTemp <=6000 : playWithStar();
-      case 5100<= scrollTemp <=6600 : asYouPlay();
-      case 5700<= scrollTemp : lastStep();
-    }
+  clearTimeout(canceTime);
+   canceTime = setTimeout(() => {
+     scrollTemp =  getScrollTop();
+     /*(scrollTemp >40 && (document.body.style.paddingTop !== '142px')) && changeTop();*/
+     (scrollTemp === 0  && (document.body.style.paddingTop === '142px')) && changeUp();
+     switch(true){
+       case 240<= scrollTemp <=2000:  RedPackagePage();
+       case 1100<= scrollTemp <= 3000 : gorgeWar();
+       case 2100<= scrollTemp <= 4000 : welfare();
+       case 3100<= scrollTemp <=5200 : newsTimeLimit();
+       case 4250<= scrollTemp <=6000 : playWithStar();
+       case 5100<= scrollTemp <=6600 : asYouPlay();
+       case 5700<= scrollTemp : lastStep();
+     }
+   },50)
 
  }
 //通过scroll触发修改paddingtop

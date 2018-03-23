@@ -62,13 +62,13 @@ function scrollTo945(){
     var scrollHeight = scrollDownHeigh - scrollTemp;
     var len = Math.floor(scrollHeight/step),i=0;
     var first_length = scrollHeight % step
-    clearInterval(timer)
-    timer = setInterval(function(){
+    function animate(){
       if(i>len) return;
       i==0 ?  window.scrollTo(0,first_length) : window.scrollTo(0,i*step+first_length);
-      i === len && clearTimerDown()
       i++;
-    },1000/60)
+      requestAnimationFrame(animate)
+    }
+    requestAnimationFrame(animate)
 
 }
 
@@ -80,13 +80,20 @@ function scrollTo0(){
     var scrollHeight = scrollTemp - 0;
     var len = Math.floor(scrollHeight/step),i=0;
     var last_langth =scrollHeight % step;
-    clearInterval(timer)
+    /*learInterval(timer)
     timer = setInterval(function(){
       if(i>len) return;
       i==0 ?  window.scrollTo(0,scrollTemp - last_langth) : window.scrollTo(0,scrollTemp -(i*step+last_langth));
       i === len && clearTimerUp()
       i++;
-    },1000/60)
+    },1000/60)*/
+    function animate(){
+      if(i>len) return;
+      i==0 ?  window.scrollTo(0,scrollTemp - last_langth) : window.scrollTo(0,scrollTemp -(i*step+last_langth));
+      i++;
+      requestAnimationFrame(animate)
+    }
+    requestAnimationFrame(animate)
 
 }
 
@@ -110,3 +117,23 @@ function clearTimerUp(){
   },10)
 
 }
+
+
+window.requestAnimationFrame= (function () {
+  return window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame||
+      function (callback) {
+        setTimeout(callback,1000/60)
+      }
+})()
+
+window.cancelAnimationFrame = (function(){
+  return window.cancelAnimationFrame ||
+      window.mozCancelAnimationFrame ||
+      window.webkitCancelAnimationFrame ||
+      window.oCancelAnimationFrame ||
+      window.clearTimeout
+})()
