@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  var findMedianSortedArrays = function(nums1, nums2) {
+    var centerFlag = false;
+    nums1 = nums1 || [];
+    nums2 = nums2 || [];
+    var result = [];
+    while(nums1.length>0 && nums2.length>0){
+      result.push(nums1[0] > nums2[0] ? nums2.shift() : nums1.shift()) ;
+    }
+    result = result.concat(nums1).concat(nums2);
+    if(result.length === 0 )return null;
+    else if (result.length === 1)return result[0];
+    centerFlag = result.length % 2 === 0 ? true : false;
+    if(!centerFlag){
+      return  result[Math.round(result.length / 2 )-1];
+    }else{
+      var center = result.length/2;
+      return  (result[center-1] + result[center])/2;
+    }
+
+  };
+  function
+
+
+
+</script>
+</html>
