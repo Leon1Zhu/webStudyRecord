@@ -12,7 +12,7 @@ let data =  {
   "value": 28.685715,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -29,7 +29,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -46,7 +46,7 @@ let data =  {
   "value": 9.485714,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 1
@@ -63,7 +63,7 @@ let data =  {
   "value": 9.485714,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 1
@@ -80,7 +80,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -97,7 +97,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -114,7 +114,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -131,7 +131,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -148,7 +148,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -165,7 +165,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 0
@@ -182,7 +182,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 1
@@ -233,7 +233,7 @@ let data =  {
   "value": 4,
   "label": {
     "normal": {
-      "show": false
+      "show": true
     }
   },
   "category": 1
