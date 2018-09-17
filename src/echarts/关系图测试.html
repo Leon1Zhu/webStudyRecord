@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts-en.min.js"></script>
+  <script src="./data.js"></script>
+    <title>关系图测试</title>
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: 600px;height:400px;"></div>
+</body>
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+
+  const categories = [
+    {name: '模块1'},
+    {name: '模块2'},
+    {name: '模块3'},
+    {name: '模块4'},
+    {name: '模块5'},
+    ]
+  option = {
+    title: {
+      text: '模块关系图',
+      subtext: 'Default layout',
+      top: 'bottom',
+      left: 'right'
+    },
+    tooltip: {},
+    legend: [{
+      // selectedMode: 'single',
+      data: categories.map(function (a) {
+        return a.name;
+      })
+    }],
+    animationDuration: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    series : [
+      {
+        name: '模块关系图',
+        type: 'graph',
+        layout: 'none',
+        data: data.nodes,
+        links: data.links,
+        categories: categories,
+        roam: true,
+        focusNodeAdjacency: true,
+        itemStyle: {
+          normal: {
+            borderColor: '#fff',
+            borderWidth: 1,
+            shadowBlur: 10,
+            shadowColor: 'rgba(0, 0, 0, 0.3)'
+          }
+        },
+        label: {
+          position: 'right',
+          formatter: '{b}'
+        },
+        lineStyle: {
+          color: 'source',
+          curveness: 0.3
+        },
+        emphasis: {
+          lineStyle: {
+            width: 10
+          }
+        }
+      }
+    ]
+  };
+
+  myChart.setOption(option);
+</script>
+</html>
