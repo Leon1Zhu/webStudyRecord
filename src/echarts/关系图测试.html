@@ -2,24 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts-en.min.js"></script>
-  <script src="./data.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts-en.js"></script>
     <title>关系图测试</title>
 </head>
 <body>
 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-<div id="main" style="width: 600px;height:400px;"></div>
+<div id="main" style="width: 1500px;height:500px;"></div>
 </body>
+<script src="./data.js"></script>
 <script type="text/javascript">
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(document.getElementById('main'));
-
   const categories = [
-    {name: '模块1'},
-    {name: '模块2'},
-    {name: '模块3'},
-    {name: '模块4'},
-    {name: '模块5'},
+    {name: '总模块'},
+    {name: 'SkyBase'},
+    {name: 'SkyFS'},
+    {name: 'SkyCloundOS'},
+    {name: 'SkyIntelligent'},
     ]
   option = {
     title: {
@@ -55,6 +54,10 @@
             shadowColor: 'rgba(0, 0, 0, 0.3)'
           }
         },
+        smooth: true,
+        line: {
+          smooth: true
+        },
         label: {
           position: 'top',
           formatter: '{b}',
@@ -62,7 +65,8 @@
         },
         lineStyle: {
           color: 'source',
-          curveness: 0.3
+          curveness: 0.3,
+          type: 'dotted',
         },
         emphasis: {
           lineStyle: {
@@ -72,7 +76,7 @@
       }
     ]
   };
-
   myChart.setOption(option);
+
 </script>
 </html>
