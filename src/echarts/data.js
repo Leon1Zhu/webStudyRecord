@@ -300,8 +300,8 @@ const getData = function (){
         "label": {
           "normal": {
             'position': ''+labelPosition+'',
+            fontSize: '14'
           },
-
         },
         "category": i+1,
       })
@@ -311,7 +311,7 @@ const getData = function (){
         "target": ''+item.componentId+'',
         "lineStyle": {
           type: 'solid',
-        }
+        },
       })
       id++;
       config.componetRenderCount ++;
@@ -336,175 +336,3 @@ const getData = function (){
 
 
 
-let data = getData();
-console.log(data)
-
-let dataItem =  {
-  "nodes": [{
-    "id": "0",
-    "name": "Myriel",
-    "itemStyle": null,
-    "symbolSize": 19.12381,
-    "x": -100,
-    "y": 100,
-    "attributes": {
-      "modularity_class": 0
-    },
-    "value": '4个',
-    "label": {
-      "normal": {
-        "show": true
-      }
-    },
-    "category": 0
-  }, {
-    "id": "1",
-    "name": "Napoleon",
-    "itemStyle": null,
-    "symbolSize": 2.6666666666666665,
-    "x": 418.08344,
-    "y": 446.8853,
-    "attributes": {
-      "modularity_class": 0
-    },
-    "value": 4,
-    "label": {
-      "normal": {
-        "show": true
-      }
-    },
-    "category": 0
-  }, {
-    "id": "2",
-    "name": "MlleBaptistine",
-    "itemStyle": null,
-    "symbolSize": 6.323809333333333,
-    "x": -212.76357,
-    "y": 245.29176,
-    "attributes": {
-      "modularity_class": 1
-    },
-    "value": 9.485714,
-    "label": {
-      "normal": {
-        "show": true
-      }
-    },
-    "category": 1
-  }, {
-    "id": "3",
-    "name": "MmeMagloire",
-    "itemStyle": null,
-    "symbolSize": 6.323809333333333,
-    "x": -242.82404,
-    "y": 235.26283,
-    "attributes": {
-      "modularity_class": 1
-    },
-    "value": 9.485714,
-    "label": {
-      "normal": {
-        "show": true
-      }
-    },
-    "category": 1
-  }, {
-    "id": "4",
-    "name": "CountessDeLo",
-    "itemStyle": null,
-    "symbolSize": 2.6666666666666665,
-    "x": -379.30386,
-    "y": 429.06424,
-    "attributes": {
-      "modularity_class": 0
-    },
-    "value": 4,
-    "label": {
-      "normal": {
-        "show": true
-      }
-    },
-    "category": 0
-  }],
-  "links": [{
-    "id": "0",
-    "name": null,
-    "source": "1",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "1",
-    "name": null,
-    "source": "2",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "2",
-    "name": null,
-    "source": "3",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "3",
-    "name": null,
-    "source": "3",
-    "target": "2",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "4",
-    "name": null,
-    "source": "4",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "5",
-    "name": null,
-    "source": "5",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "6",
-    "name": null,
-    "source": "6",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "7",
-    "name": null,
-    "source": "7",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "8",
-    "name": null,
-    "source": "8",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }, {
-    "id": "9",
-    "name": null,
-    "source": "9",
-    "target": "0",
-    "lineStyle": {
-      "normal": {}
-    }
-  }]
-}
