@@ -6,12 +6,10 @@
     <title>关系图测试</title>
 </head>
 <body>
-<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
 <div id="main" style="width: 1500px;height:500px;"></div>
 </body>
 <script src="./data.js"></script>
 <script type="text/javascript">
-  // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(document.getElementById('main'));
   const categories = [
     {name: '总模块'},
