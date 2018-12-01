@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video id="video" class="video" autoplay="" loop="" muted="">
+  <source id="video_mp4" src="./assets/1bg.mp4" type="video/mp4"></video>
+
+</body>
+<script>
+  var video=document.getElementById("video");//video标签对象
+
+  setInterval(function(){
+      console.log(video.currentTime)//获取视频当前播放时间
+  },1000)
+</script>
+</html>

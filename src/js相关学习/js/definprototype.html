@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  .ccc{
+    border:40px solid black;
+    border-left-color: yellow;
+    border-right-color: red;
+    border-bottom-color: blue;
+    width:0px;
+  }
+</style>
+<body>
+<div class="ccc"></div>
+
+</body>
+<script>
+class Person{
+    constructor(name){
+        this.name = name ;
+    }
+}
+
+class Animal{
+    constructor(){
+    }
+}
+
+var person  = new Person();
+person.name = 'person';
+
+var animal = new Animal('Animal');
+Object.defineProperty(person, "name",{
+  enumerable: true,
+  configurable: true,
+  get: function(){
+      return this._name;
+  },
+  set: function(newName){
+    animal.name = newName;
+    person._name = newName;
+  }
+});
+
+console.log(person.name)
+  console.log(animal.name)
+
+  person.name = 'newName';
+console.log(person.name)
+console.log(animal.name)
+
+person.name = 'newName1';
+console.log(person.name)
+console.log(animal.name)
+
+</script>
+</html>

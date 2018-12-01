@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<title>echarts</title>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.css">
+<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/extensions/editable/bootstrap-table-editable.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+<head>
+  <style type="text/css">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    #content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #edit-charts-btn {
+      position: absolute;
+      display: none;
+    }
+    .cursor{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" draggable="true"></div>
+  <button type="button" class="btn btn-primary" id="edit-charts-btn" data-toggle="modal" data-target="#exampleModal">
+    编辑图表
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> 图表编辑</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span class="cursor" onclick="addRow()">+</span>
+          <span class="cursor" onclick="deleteRow()">-</span>
+          <table id="table"></table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="echarts.simple.min.js"></script>
+<script type="text/javascript">
+  var myChart;
+  var option = {
+    title: {
+      text: '某站点用户访问来源',
+      subtext: '纯属虚构',
+      x: 'center'
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      orient: 'vertical',
+      x: 'left',
+      data: ['直接访问', '邮件营销']
+    },
+    toolbox: {
+      show: true,
+      feature: {
+        mark: { show: true },
+        dataView: { show: true, readOnly: false },
+        magicType: {
+          show: true,
+          type: ['pie', 'funnel'],
+          option: {
+            funnel: {
+              x: '25%',
+              width: '50%',
+              funnelAlign: 'left',
+              max: 1548
+            }
+          }
+        },
+        restore: { show: true },
+        saveAsImage: { show: true }
+      }
+    },
+    calculable: true,
+    series: [
+      {
+        name: '访问来源',
+        type: 'pie',
+        radius: '55%',
+        center: ['50%', '60%'],
+        data: [
+          { value: 335, name: '直接访问' },
+          { value: 310, name: '邮件营销' },
+        ]
+      }
+    ]
+  };
+  function ready(fn) {
+    if (document.addEventListener) {
+      document.addEventListener('DOMContentLoaded', function () {
+        document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+        fn();
+      }, false);
+    } else if (document.attachEvent) {
+      // 兼容ie
+      document.attachEvent('onreadystatechange', function () {
+        if (document.readyState == 'complete') {
+          document.detachEvent('onreadystatechange', arguments.callee);
+          fn();
+        }
+      });
+    }
+  }
+
+  // DOM加载完成之后
+  ready(function () {
+    //去除默认的鼠标事件
+    document.oncontextmenu = function () { return false; };
+    initCharts();
+    resizeFun();
+  })
+  function initCharts() {
+    // 获取DOM容器
+    myChart = echarts.init(document.getElementById('content'));
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+    // 重写右击事件
+    rewriteContextMenu();
+  }
+
+  // 邮件点击显示menu
+  function rewriteContextMenu() {
+    var editBtn = document.getElementById('edit-charts-btn');
+    //右击打开菜单
+    myChart.on('contextmenu', function (params) {
+      var e = params.event;
+      editBtn.style.top = e.offsetY + 'px';
+      editBtn.style.left = e.offsetX + 'px';
+      editBtn.style.display = 'block';
+      editModal(params);
+    });
+    //点击关闭菜单
+    document.onclick = function (e) {
+      var event = e || window.event;
+      editBtn.style.display = 'none';
+    }
+  }
+
+  // 编辑modal
+  function editModal(params) {
+    var rowIndex;
+    $('#table').bootstrapTable({
+      editable: true,//开启编辑模式
+      clickToSelect: true,
+      cache: false,
+      columns: [
+        {
+          field: "name", edit: false, title: "name", align: "center",
+          editable: {
+            type: 'text',
+            title: '用户名',
+            formatter: function (value, row, index) {
+              return '<span data-pk="'+ index +'">" + value + "</span>';
+
+            },
+            validate: function (v) {
+              if (!v) return '用户名不能为空';
+            }
+          }
+        },
+        {
+          field: "value", title: "值", align: "center",
+          editable: {
+            type: 'text',
+            title: '用户名',
+            validate: function (v) {
+              if (!v) return '用户名不能为空';
+            }
+          }
+        },
+      ],
+      onClickRow: function (row, $element) {
+        rowIndex = $element[0].dataset.index
+      },
+      onEditableHidden: function (field, row, $el, reason) {
+        // 编辑结束
+        if (reason === 'save') {
+          option.series[0].data[rowIndex] = row;
+          refreshCharts();
+        }
+      },
+      onEditableSave: function (field, row, oldValue, $el) {
+        // 开始编辑
+      },
+      data: option.series[0].data
+    });
+  }
+
+  function refreshCharts() {
+    myChart.setOption(option, true);
+  }
+  function refreshTable() {
+    $('#table').bootstrapTable('refresh')
+  }
+  function addRow() {
+     option.series[0].data.push({name: "" , value: ""});
+     refreshCharts();
+      refreshTable();
+  }
+
+  function deleteRow() {
+    var data = option.series[0].data;
+    option.series[0].data = data.splice(data.length,1);
+    refreshCharts();
+    refreshTable();
+  }
+  // 重置大小
+  function resizeFun() {
+    window.onresize = function () {
+      var timer = null;
+      // 使用节流，减少性能损耗
+      if (!timer) {
+        timer = setTimeout(function () {
+          myChart.resize();
+          timer = null;
+        }, 700);
+      }
+    };
+  }
+
+</script>
+
+</html>

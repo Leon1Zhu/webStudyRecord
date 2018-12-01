@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<title>HTML5文本拖放</title>
+
+<head>
+  <style type="text/css">
+    #div1 {
+      width: 220px;
+      height: 185px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="text-content" draggable="true"></div>
+  <br>
+  <script type="text/javascript">
+    function ready(fn) {
+      if (document.addEventListener) {		
+        document.addEventListener('DOMContentLoaded', function () {
+          document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+          fn();		
+        }, false);
+      } else if (document.attachEvent) {		
+        // 兼容ie
+        document.attachEvent('onreadystatechange', function () {
+          if (document.readyState == 'complete') {
+            document.detachEvent('onreadystatechange', arguments.callee);
+            fn();		
+          }
+        });
+      }
+    }
+    
+    // DOM加载完成之后
+    ready(function (){
+      //document.getElementById('')
+    })
+  </script>
+</body>
+
+</html>
