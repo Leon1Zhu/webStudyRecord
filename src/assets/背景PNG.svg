@@ -126,8 +126,59 @@
       animation: bg1-circle 9s 1.7s cubic-bezier(0,1.15,.34,.96);
       animation-fill-mode: forwards;
     }
+    @keyframes star-fall {
+    0% {
+    opacity: 0;
+    transform: scale(0.5) translate3d(0, 0, 0);
+    -webkit-transform: scale(0.5) translate3d(0, 0, 0);
+    -moz-transform: scale(0.5) translate3d(0, 0, 0);
+    }
+    50% {
+    opacity: 1;
+    transform: translate3d(-200px, 200px, 0);
+    -webkit-transform: translate3d(-200px, 200px, 0);
+    -moz-transform: translate3d(-200px, 200px, 0);
+    }
+    100% {
+    opacity: 0;
+    transform: scale(1.2) translate3d(-300px, 300px, 0);
+    -webkit-transform: scale(1.2) translate3d(-300px, 300px, 0);
+    -moz-transform: scale(1.2) translate3d(-300px, 300px, 0);
+    }
+    }
+
+    .animationCircle {
+    display: block;
+    　　　 width: 1px;
+    background: transparent;
+    position: relative;
+    border: 0px solid #fff;
+    border-width: 0px 90px 2px 90px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, .5);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+    /*变形*/
+    }
+
+    .animationCircle:after {
+    content: '';
+    display: block;
+    border: 0px solid #fff;
+    border-width: 0px 90px 2px 90px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, .5);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+    /*变形*/
+    transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    -webkit-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    -moz-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+    transform-origin: 0% 100%;
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    }
   </style>
     <defs>
+        <filter id="f1">
+          <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+        </filter>
         <linearGradient x1="-16.5421771%" y1="117.738497%" x2="110.10527%" y2="7.42327116%" id="linearGradient-1">
             <stop stop-color="#F6ABDC" offset="0%"></stop>
             <stop stop-color="#6512BC" offset="27.7662879%"></stop>
@@ -230,6 +281,9 @@
         <filter x="-59.9%" y="-60.0%" width="219.9%" height="219.9%" filterUnits="objectBoundingBox" id="filter-31">
             <feGaussianBlur stdDeviation="1.286604" in="SourceGraphic"></feGaussianBlur>
         </filter>
+      <filter x="-59.9%" y="-60.0%" width="219.9%" height="219.9%" filterUnits="objectBoundingBox" id="filter-32">
+        <feGaussianBlur stdDeviation="1.286604" in="SourceGraphic"></feGaussianBlur>
+      </filter>
         <path d="M13.4516928,8.58320291 C13.6418675,8.64945295 13.8206318,8.73226551 13.9905212,8.83036654 L1.02694356,1.26129893 C0.858321961,1.1631979 0.679557712,1.07911131 0.489382979,1.01286126" id="path-32"></path>
         <path d="M13.4516928,8.58320291 C13.6418675,8.64945295 13.8206318,8.73226551 13.9905212,8.83036654 L1.02694356,1.26129893 C0.858321961,1.1631979 0.679557712,1.07911131 0.489382979,1.01286126" id="path-34"></path>
         <path d="M13.4516928,8.58320291 C13.6418675,8.64945295 13.8206318,8.73226551 13.9905212,8.83036654 L1.02694356,1.26129893 C0.858321961,1.1631979 0.679557712,1.07911131 0.489382979,1.01286126" id="path-36"></path>
@@ -477,7 +531,8 @@
                     <ellipse id="椭圆形" stroke="#FBC8E5" stroke-width="1.286604" transform="translate(882.986798, 665.026571) rotate(42.000000) translate(-882.986798, -665.026571) " cx="882.986798" cy="665.026571" rx="9.01457422" ry="4.50717457"></ellipse>
                     <ellipse id="椭圆形" stroke="#FBC8E5" stroke-width="1.286604" transform="translate(200.381670, 353.421021) rotate(42.000000) translate(-200.381670, -353.421021) " cx="200.38167" cy="353.421021" rx="9.01457422" ry="4.50717457"></ellipse>
                     <ellipse id="椭圆形" stroke="#FBC8E5" stroke-width="1.286604" transform="translate(106.362473, 339.257132) rotate(149.000000) translate(-106.362473, -339.257132) " cx="106.362473" cy="339.257132" rx="9.01496758" ry="4.50697786"></ellipse>
-                    <polyline id="路径-12" stroke="#F6C2E3" stroke-width="1.286604" points="481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062"></polyline>
+                  <ellipse id="椭圆形" stroke="#FBC8E5" stroke-width="1.286604" transform="translate(947.7426, 685.35318) rotate(42.000000) translate(-947.7426, -690.35318) " cx="947.7426" cy="685.35318" rx="9.01496758" ry="4.50697786"></ellipse>
+                  <polyline id="路径-12" stroke="#F6C2E3" stroke-width="1.286604" points="481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062"></polyline>
                     <polyline id="路径-13" stroke="#FBC8E5" stroke-width="1.286604" points="624.390235 842.480314 699.761441 797.346581 759.066667 797.346581 947.7426 685.35318"></polyline>
                     <polyline id="路径-14" stroke="url(#linearGradient-5)" stroke-width="1.286604" points="828.163006 719.732529 927.757483 661.808385 996.504642 659.907513 1138.94776 578.257786"></polyline>
                     <polyline id="路径-15" stroke="url(#linearGradient-6)" stroke-width="1.286604" points="874.786939 659.413241 840.653788 639.023734 839.842303 612.833693 917.506754 570.495045 914.767898 542.390292 968.977146 510.76641 962.716354 483.933107 1104.03849 397.992568"></polyline>
@@ -493,15 +548,20 @@
                     <polyline id="路径-24" stroke="url(#linearGradient-11)" stroke-width="1.286604" opacity="0.665829613" points="919.141655 141.523958 968.977146 110.919053 1009.07531 124.369917 1114.64965 57.8174621"></polyline>
                     <polyline id="路径-25" stroke="#ECB5E0" stroke-width="1.286604" opacity="0.638299851" points="1.25139706 348.073614 225.351948 226.264061 273.969265 245.372065 570.019923 63.3362161 617.778726 78.6194096 755.98084 0.627729636"></polyline>
 
+                  <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="8" ry="8">
+                    <animateMotion id="animation11" path="M48.1041903 455.685361 157.006064 402.892685 160.821752 368.923811 108.637098 343.192458" begin="0s;animation12.end"  dur="2s" rotate="auto"  />
+                    <animateMotion id="animation12" path="M203.944229,350.447689 L595.468157,124.138556" begin="animation11.end"  dur="2s" rotate="auto"  />
+                  </ellipse>
 
-                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
-                    <animateMotion id="animation1-1" class="animation=circle" path="M48.1041903 455.685361 157.006064 402.892685 160.821752 368.923811 108.637098 343.192458" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
+                  <ellipse fill-opacity="1" class="animationCircle" fill="rgba(255, 255, 255, .5)" fill-rule="nonzero" rx="5" ry="5">
+                    <animateMotion id="animation21" path="M840.827692,675.215239 L585.81672,823.302652" begin="0s;animation22.end"  dur="2s" rotate="auto"  />
+                    <animateMotion id="animation22" path="M224.170569 790.822062 327.468898 734.436232 363.700732 737.675507 481.972667 675.215239" begin="animation21.end"  dur="2s" rotate="auto"  />
                   </ellipse>
-                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
-                    <animateMotion id="animation10" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
-                  </ellipse>
-                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
-                    <animateMotion id="animation10" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
+
+                  <ellipse fill-opacity="1" class="animationCircle" fill="rgba(255, 255, 255, .5)" fill-rule="nonzero" rx="5" ry="5">
+                    <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="0s;animation33.end"  dur="1s" rotate="auto"  />
+                    <animateMotion id="animation32" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999 " begin="animation31.end"  dur="1s" rotate="auto"  />
+                    <animateMotion id="animation33" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="animation32.end"  dur="1s" rotate="auto"  />
                   </ellipse>
 
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-12)" cx="399.066261" cy="827.165531" rx="3.21983551" ry="3.2190656"></ellipse>
@@ -524,6 +584,7 @@
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-29)" cx="303.75913" cy="693.252402" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-30)" cx="384.898984" cy="666.212251" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-31)" cx="114.432802" cy="794.974875" rx="3.21983551" ry="3.2190656"></ellipse>
+
 
                 </g>
                 <g id="分组-7" transform="translate(128.711212, 14.311649)">
