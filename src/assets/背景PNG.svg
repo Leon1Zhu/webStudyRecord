@@ -492,6 +492,18 @@
                     <path d="M928.623322,199.840171 L1093.90676,99.3299917" id="路径-23" stroke="url(#linearGradient-10)" stroke-width="1.286604" opacity="0.716238839"></path>
                     <polyline id="路径-24" stroke="url(#linearGradient-11)" stroke-width="1.286604" opacity="0.665829613" points="919.141655 141.523958 968.977146 110.919053 1009.07531 124.369917 1114.64965 57.8174621"></polyline>
                     <polyline id="路径-25" stroke="#ECB5E0" stroke-width="1.286604" opacity="0.638299851" points="1.25139706 348.073614 225.351948 226.264061 273.969265 245.372065 570.019923 63.3362161 617.778726 78.6194096 755.98084 0.627729636"></polyline>
+
+
+                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
+                    <animateMotion id="animation1-1" class="animation=circle" path="M48.1041903 455.685361 157.006064 402.892685 160.821752 368.923811 108.637098 343.192458" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
+                  </ellipse>
+                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
+                    <animateMotion id="animation10" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
+                  </ellipse>
+                  <ellipse fill-opacity="1" fill="#fff" fill-rule="nonzero" rx="5" ry="5">
+                    <animateMotion id="animation10" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="0s"  dur="5s" rotate="auto"  repeatCount="indefinite"/>
+                  </ellipse>
+
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-12)" cx="399.066261" cy="827.165531" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#84CCF2" filter="url(#filter-13)" cx="785.446522" cy="408.687003" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#84CCF2" filter="url(#filter-14)" cx="821.508679" cy="390.660236" rx="3.21983551" ry="3.2190656"></ellipse>
@@ -512,6 +524,7 @@
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-29)" cx="303.75913" cy="693.252402" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-30)" cx="384.898984" cy="666.212251" rx="3.21983551" ry="3.2190656"></ellipse>
                     <ellipse id="椭圆形" fill="#FCC9E6" filter="url(#filter-31)" cx="114.432802" cy="794.974875" rx="3.21983551" ry="3.2190656"></ellipse>
+
                 </g>
                 <g id="分组-7" transform="translate(128.711212, 14.311649)">
                     <g id="分组-6">
