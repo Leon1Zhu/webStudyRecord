@@ -127,7 +127,7 @@
       animation-fill-mode: forwards!important;
     }
     .tail {
-      transform: rotate(-124deg) translate(-2.4%,-13%);
+      transform: rotate(58deg) translate(-2.4%,-13%);
     }
   </style>
     <defs>
@@ -515,21 +515,21 @@
 
                   <g class="ballShake">
                     <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="8" ry="8" filter="url(#filter-circle)" >
-                      <animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />
-                      <animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />
+                      <!--<animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />-->
                     </ellipse>
                     <g>
                       <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="18" rx="12" ry="12" height="150" fill="url(#tailGrad)" opacity="0.6"/>
-                      <animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />
-                      <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />
-                      <animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />
+                      <!--<animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />-->
+                      <!--<animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />-->
                     </g>
                   </g>
 
