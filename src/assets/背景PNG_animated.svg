@@ -96,39 +96,52 @@
 
     .icon1 {
       transition: fill .5s;
-      animation: svg-icon 5s!important;
+      animation: svg-icon 4.5s!important;
     }
 
     .icon2 {
       transition: fill .5s;
-      animation: svg-icon 3s 5.5s!important;
+      animation: svg-icon 3s 4.5s!important;
       animation-dealy: 2s!important;
     }
     .icon3 {
       transition: till .5s;
-      animation: svg-icon 3s 8.5s!important;
+      animation: svg-icon 3s 7.5s!important;
       animation-dealy: 2s!important;
       animation-fill-mode: forwards!important;
     }
     .bg1-border {
-      animation: bg1-border 9s 1.7s cubic-bezier(0,1.15,.34,.96)!important;
+      animation: bg1-border 9s 2s cubic-bezier(0,1.15,.34,.96)!important;
       animation-fill-mode: forwards!important;
     }
     .bg1-content {
-      animation: bg1-content 9s 1.7s cubic-bezier(0,1.15,.34,.96)!important;
+      animation: bg1-content 9s 2s cubic-bezier(0,1.15,.34,.96)!important;
       animation-fill-mode: forwards!important;
     }
     .bg2-content {
       opacity: 0;
-      animation: bg2-content 9s 1.7s!important;
+      animation: bg2-content 9s 2s!important;
     }
     .bg1-circle {
-      animation: bg1-circle 9s 1.7s cubic-bezier(0,1.15,.34,.96)!important;
+      animation: bg1-circle 9s 2s cubic-bezier(0,1.15,.34,.96)!important;
       animation-fill-mode: forwards!important;
+    }
+    .tail {
+      transform: rotate(-124deg) translate(-2.4%,-13%);
     }
   </style>
     <defs>
-        <filter id="f1">
+      <filter x="-29.0%" y="-27.7%" width="158.0%" height="155.3%" filterUnits="objectBoundingBox" id="filter-circle">
+        <feGaussianBlur stdDeviation="3.31194196" in="SourceGraphic"></feGaussianBlur>
+      </filter>
+      <clipPath id="tailMask">
+        <polygon class="tailMask" points="87,849 0,739 48,0" />
+      </clipPath>
+      <linearGradient id="tailGrad" x1="25" y1="35" x2="25" y2="0" gradientUnits="userSpaceOnUse">
+        <stop class="tailColor" offset="0" stop-color="#FFF" stop-opacity="1" />
+        <stop class="tailGradOffset" offset="1" stop-color="#093863" stop-opacity="0" />
+      </linearGradient>
+      <filter id="f1">
           <feGaussianBlur stdDeviation="10"></feGaussianBlur>
         </filter>
         <linearGradient x1="-16.5421771%" y1="117.738497%" x2="110.10527%" y2="7.42327116%" id="linearGradient-1">
@@ -500,21 +513,26 @@
                     <path id="è·¯å¾-24" stroke="url(#linearGradient-11)" stroke-width="1.286604" opacity="0.665829613" d="M919.141655,141.523958L968.977146,110.919053L1009.07531,124.369917L1114.64965,57.8174621" class="JwxEpcHl_73"></path>
                     <path id="è·¯å¾-25" stroke="#ECB5E0" stroke-width="1.286604" opacity="0.638299851" d="M1.25139706,348.073614L225.351948,226.264061L273.969265,245.372065L570.019923,63.3362161L617.778726,78.6194096L755.98084,0.627729636" class="JwxEpcHl_74"></path>
 
-                  <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="8" ry="8">
-                    <animateMotion id="animation11" path="M48.1041903 455.685361 157.006064 402.892685 160.821752 368.923811 108.637098 343.192458" begin="3s;animation12.end"  dur="2s" rotate="auto"  />
-                    <animateMotion id="animation12" path="M203.944229,350.447689 L595.468157,124.138556" begin="animation11.end"  dur="2s" rotate="auto"  />
-                  </ellipse>
+                  <g class="ballShake">
+                    <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="8" ry="8" filter="url(#filter-circle)" >
+                      <animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />
+                      <animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />
+                    </ellipse>
+                    <g>
+                      <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="18" rx="12" ry="12" height="150" fill="url(#tailGrad)" opacity="0.6"/>
+                      <animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />
+                      <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />
+                      <animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />
+                    </g>
+                  </g>
 
-                  <ellipse fill-opacity="1" class="animationCircle" fill="rgba(255, 255, 255, .5)" fill-rule="nonzero" rx="5" ry="5">
-                    <animateMotion id="animation21" path="M840.827692,675.215239 L585.81672,823.302652" begin="3s;animation22.end"  dur="2s" rotate="auto"  />
-                    <animateMotion id="animation22" path="M224.170569 790.822062 327.468898 734.436232 363.700732 737.675507 481.972667 675.215239" begin="animation21.end"  dur="2s" rotate="auto"  />
-                  </ellipse>
-
-                  <ellipse fill-opacity="1" class="animationCircle" fill="rgba(255, 255, 255, .5)" fill-rule="nonzero" rx="5" ry="5">
-                    <animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="3s;animation33.end"  dur="1s" rotate="auto"  />
-                    <animateMotion id="animation32" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999 " begin="animation31.end"  dur="1s" rotate="auto"  />
-                    <animateMotion id="animation33" path="M947.7426 685.35318 759.066667 797.346581 699.761441 797.346581 624.390235 842.480314" begin="animation32.end"  dur="1s" rotate="auto"  />
-                  </ellipse>
 
                     <path id="æ¤­åå½¢" fill="#FCC9E6" filter="url(#filter-12)" d="M395.84642549,827.165531A3.21983551,3.2190656 0,1,1 402.28609651,827.165531A3.21983551,3.2190656 0,1,1 395.84642549,827.165531" class="JwxEpcHl_78"></path>
                     <path id="æ¤­åå½¢" fill="#84CCF2" filter="url(#filter-13)" d="M782.2266864899999,408.687003A3.21983551,3.2190656 0,1,1 788.66635751,408.687003A3.21983551,3.2190656 0,1,1 782.2266864899999,408.687003" class="JwxEpcHl_79"></path>
@@ -611,7 +629,7 @@
                         </g>
                         <g id="åç»-3">
                             <g id="åç»-2">
-                                <g id="åç»" transform="translate(579.789121, 0.000000)">
+                                <g id="åç»" class="huaban-1" transform="translate(579.789121, 0.000000)">
                                     <path d="M195.475595,8.53900981 L20.8817416,109.522216 C16.3980992,112.115605 12.7426337,118.459354 12.7581889,123.620207 L6.02260492,119.698904 L12.757199,123.620065 L13.276181,306.865892 C13.2830716,309.429248 14.1951308,311.237947 15.6599628,312.092076 L2.90318797,304.66455 C1.43815985,303.811724 0.526052569,302.002654 0.51756785,299.438508 L4.0176558,301.47579 L0.517992086,299.438366 L0.000425335461,116.192928 L1.03888282e-12,116.192681 C-0.0141411981,111.031804 3.64135851,104.689437 8.12553242,102.09554 L182.719269,1.11264136 L190.787671,5.80950506 L182.719835,1.1120747 C184.025067,0.358413883 185.262422,0.00141665566 186.359779,0.00141665566 C187.161585,0.00141665566 187.887028,0.191248515 188.513483,0.55532902 L201.270258,7.98143801 C199.785432,7.11727805 197.733545,7.23344382 195.476609,8.53960034 Z" id="åå¹¶å½¢ç¶" fill="url(#linearGradient-51)" class="JwxEpcHl_113"></path>
                                     <path d="M195.476468,8.53917534 C199.960642,5.94527882 203.640182,8.04617917 203.654323,13.2070558 L204.173305,196.452883 C204.187446,201.615176 200.531946,207.957543 196.047772,210.55144 L21.4534702,311.533489 C16.9692963,314.127385 13.2911707,312.027902 13.2756154,306.865608 L12.7580475,123.619782 C12.7424922,118.458905 16.3979919,112.116538 20.8821658,109.522641 L195.476468,8.53917534 Z" id="Fill-25" fill="url(#linearGradient-52)" class="JwxEpcHl_114"></path>
                                 </g>
@@ -932,7 +950,7 @@
                                     <path id="Fill-2" fill="url(#linearGradient-138)" d="M0.0285743804,64.8768549L2.1936726,66.1211436L2.1649958,56.2194808L-0.000102417134,54.9762045Z" class="JwxEpcHl_204"></path>
                                     <path id="Fill-3" fill="url(#linearGradient-139)" d="M95.5701557,0.398027869L0,54.9757995L2.16509822,56.2190758L97.7352539,1.64231658Z" class="JwxEpcHl_205"></path>
                                 </g>
-                                <g id="åç»" transform="translate(637.768034, 84.999340)">
+                                <g id="åç»" class="bar-charts" transform="translate(637.768034, 84.999340)">
                                     <path id="Fill-1" fill="url(#linearGradient-140)" d="M16.3123718,83.5834752L16.4913645,146.53109L2.58277941,154.526512L2.40293437,91.5788975Z" class="JwxEpcHl_206"></path>
                                     <path id="Fill-2" fill="#13D8F4" d="M0,90.456127L0.179845045,153.135587L2.5817566,154.525579L2.4027639,91.5788126L0,90.1888209Z" class="JwxEpcHl_207"></path>
                                     <path id="Fill-3" fill="#06E9FA" d="M0,90.1878875L0,90.1887361L2.4027639,91.5787277L16.3130537,83.5833055L13.9094374,82.1924652Z" class="JwxEpcHl_208"></path>
