@@ -135,7 +135,7 @@
       animation-fill-mode: forwards!important;
     }
     .tail {
-      transform: rotate(-90deg) translate(-2%,-14%);
+      transform: rotate(-90deg) translate(-2%,-9%);
     }
     .ballShake {
       transform: translate(-100px, 0);
@@ -530,20 +530,20 @@
 
           <g class="ballShake">
             <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="4" ry="4" filter="url(#filter-circle)" >
-              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end"  dur="1s" rotate="auto"  />
-              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+2s"  dur=".5s" rotate="auto"  />
-              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".5s" rotate="auto"  />
+              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end+.5s"  dur="1.8s" rotate="auto"  />
+              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+.8s"  dur=".8s" rotate="auto"  />
+              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".8s" rotate="auto"  />
               <animateMotion id="animation22" path="M695.468157,124.138556 L303.944229,350.447689" begin="animation21.end+2s"  dur=".8" rotate="auto"  />
-              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 580.413241" begin="animation22.end+3s"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 580.413241" begin="animation22.end+1.5s"  dur="1s" rotate="auto"  />
               <animateMotion id="animation32" path="M940.827692,675.215239 L685.81672,823.302652" begin="animation31.end+1s"  dur="1s" rotate="auto"  />
             </ellipse>
             <g>
-              <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="4" rx="12" ry="12" height="150" fill="url(#tailGrad)" opacity="0.6"/>
-              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end"  dur="1s" rotate="auto"  />
-              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+2s"  dur=".5s" rotate="auto"  />
-              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".5s" rotate="auto"  />
+              <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="4" rx="12" ry="12" height="100" fill="url(#tailGrad)" opacity="0.6"/>
+              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end+.5s"  dur="1.8s" rotate="auto"  />
+              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+.8s"  dur=".8s" rotate="auto"  />
+              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".8s" rotate="auto"  />
               <animateMotion id="animation22" path="M695.468157,124.138556 L303.944229,350.447689" begin="animation21.end+2s"  dur=".8" rotate="auto"  />
-              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 590.413241" begin="animation22.end+3s"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 580.413241" begin="animation22.end+1.5s"  dur="1s" rotate="auto"  />
               <animateMotion id="animation32" path="M940.827692,675.215239 L685.81672,823.302652" begin="animation31.end+1s"  dur="1s" rotate="auto"  />
             </g>
           </g>
@@ -1093,14 +1093,6 @@
     repeat: -1
   });
   var burnupTl = new TimelineMax({
-    yoyo: true,
-    repeat: -1
-  });
-  var burnupTl2 = new TimelineMax({
-    yoyo: true,
-    repeat: -1
-  });
-  var burnupTl3 = new TimelineMax({
     yoyo: true,
     repeat: -1
   });
