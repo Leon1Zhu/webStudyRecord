@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>HTML5逼真的陨石流星动画特效</title>
+  <title>SkyManage</title>
 </head>
 
 <body>
@@ -135,19 +135,22 @@
       animation-fill-mode: forwards!important;
     }
     .tail {
-      transform: rotate(58deg) translate(-2.4%,-13.5%);
+      transform: rotate(-90deg) translate(-2%,-14%);
+    }
+    .ballShake {
+      transform: translate(-100px, 0);
     }
   </style>
   <defs>
     <filter  x="-29.0%" y="-27.7%" width="158.0%" height="155.3%" filterUnits="objectBoundingBox" id="filter-circle">
-      <feGaussianBlur stdDeviation="3.31194196" in="SourceGraphic" class="circleSpin"></feGaussianBlur>
+      <feGaussianBlur stdDeviation="2.01194196" in="SourceGraphic" class="circleSpin"></feGaussianBlur>
     </filter>
     <clipPath id="tailMask">
-      <polygon class="tailMask" points="87,849 0,739 48,0" />
+      <polygon class="tailMask" points="0,0 0,1400 48,0" />
     </clipPath>
     <linearGradient id="tailGrad" x1="150" y1="80" x2="150" y2="0" gradientUnits="userSpaceOnUse">
-      <stop class="tailColor" offset="0" stop-color="#FFF" stop-opacity=".3" />
-      <stop class="tailGradOffset" offset="1" stop-color="rgba(255,255,255,.3)" stop-opacity=".2" />
+      <stop class="tailColor" offset="0" stop-color="#FFF" stop-opacity="1" />
+      <stop class="tailGradOffset" offset="1" stop-color="rgba(255,255,255,.3)" stop-opacity=".3" />
     </linearGradient>
     <linearGradient id="tailGrad" x1="400" y1="380.2" x2="400" y2="0" gradientUnits="userSpaceOnUse">
       <stop class="tailColor" offset="0" stop-color="#00a9e5" stop-opacity="0.3" />
@@ -526,22 +529,22 @@
           <path id="è·¯å¾-25" stroke="#ECB5E0" stroke-width="1.286604" opacity="0.638299851" d="M1.25139706,348.073614L225.351948,226.264061L273.969265,245.372065L570.019923,63.3362161L617.778726,78.6194096L755.98084,0.627729636" class="JwxEpcHl_74"></path>
 
           <g class="ballShake">
-            <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="8" ry="8" filter="url(#filter-circle)" >
-              <!--<animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />-->
-              <!--<animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />-->
+            <ellipse fill-opacity="1" class="animationCircle" fill="#fff" fill-rule="nonzero"   rx="4" ry="4" filter="url(#filter-circle)" >
+              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+2s"  dur=".5s" rotate="auto"  />
+              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".5s" rotate="auto"  />
+              <animateMotion id="animation22" path="M695.468157,124.138556 L303.944229,350.447689" begin="animation21.end+2s"  dur=".8" rotate="auto"  />
+              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 580.413241" begin="animation22.end+3s"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation32" path="M940.827692,675.215239 L685.81672,823.302652" begin="animation31.end+1s"  dur="1s" rotate="auto"  />
             </ellipse>
             <g>
-              <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="18" rx="12" ry="12" height="150" fill="url(#tailGrad)" opacity="0.6"/>
-              <!--<animateMotion id="animation11" path="M755.98084,0.627729636L617.778726,78.6194096L570.019923,63.3362161L273.969265,245.372065L225.351948,226.264061L1.25139706,348.073614" begin="3s;animation32.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation12" path="M1077.16362 300.380486 913.595975 397.238073 863.366541 391.963336 792.259371 430.697999" begin="animation11.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation21" path="M481.972667 675.215239 363.700732 737.675507 327.468898 734.436232 224.170569 790.822062" begin="animation12.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation22" path="M595.468157,124.138556 L203.944229,350.447689" begin="animation21.end"  dur="2s" rotate="auto"  />-->
-              <!--<animateMotion id="animation31" path="M1104.03849 397.992568 962.716354 483.933107 968.977146 510.76641 914.767898 542.390292 917.506754 570.495045 839.842303 612.833693 840.653788 639.023734 874.786939 659.413241" begin="animation22.end"  dur="1s" rotate="auto"  />-->
-              <!--<animateMotion id="animation32" path="M840.827692,675.215239 L585.81672,823.302652" begin="animation31.end"  dur="1s" rotate="auto"  />-->
+              <rect clip-path="url(#tailMask)" class="tail" x="37" y="0"   width="4" rx="12" ry="12" height="150" fill="url(#tailGrad)" opacity="0.6"/>
+              <animateMotion id="animation11" path="M855.98084,0.627729636L100.25139706,420.073614" begin="3s;animation32.end"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation12" path="M1177.16362 300.380486  892.259371 470.697999" begin="animation11.end+2s"  dur=".5s" rotate="auto"  />
+              <animateMotion id="animation21" path="M581.972667 675.215239 324.170569 820.822062" begin="animation12.end"  dur=".5s" rotate="auto"  />
+              <animateMotion id="animation22" path="M695.468157,124.138556 L303.944229,350.447689" begin="animation21.end+2s"  dur=".8" rotate="auto"  />
+              <animateMotion id="animation31" path="M1204.03849 397.992568 910.786939 590.413241" begin="animation22.end+3s"  dur="1s" rotate="auto"  />
+              <animateMotion id="animation32" path="M940.827692,675.215239 L685.81672,823.302652" begin="animation31.end+1s"  dur="1s" rotate="auto"  />
             </g>
           </g>
 
@@ -1101,27 +1104,27 @@
     yoyo: true,
     repeat: -1
   });
-  gradShakeTl.to(tailGradOffset, 2, {
+  gradShakeTl.to(tailGradOffset, 1, {
     attr: {
-      points: "87,849 0,739 48,41",
+      points: "0,0 0,1400 48,30",
     },
     ease: 'ballDrop'
   })
-  burnupTl.to(burnup, 3, {
+  burnupTl.to(burnup, 1, {
     attr: {
-      width: 15
+      width: 3
     },
     ease: 'ballDrop'
   })
-  burnupTl2.to(circleSpin, 3, {
+  burnupTl2.to(circleSpin, .3, {
     attr: {
-      stdDeviation: 1,
+      stdDeviation: 2.8,
     },
   })
-  burnupTl3.to(burnupCircle, 3, {
+  burnupTl3.to(burnupCircle, .3, {
     attr: {
-      rx: 5,
-      ry: 5,
+      rx: 7,
+      ry: 7,
     },
   })
 </script>
